@@ -136,6 +136,24 @@ tr:nth-child(even) {
 }
 
 
+.save-btn{
+    display : flex;
+    justify-content: right;
+    float: right;
+    transform: translateX(-50%);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+
 /* footer */
 
 .footer{
