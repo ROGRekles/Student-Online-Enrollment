@@ -21,3 +21,10 @@ CREATE TABLE Course (
     Semester varchar(255),
     PRIMARY KEY (CourseID)
 );
+CREATE TABLE Student (
+    AdminID INT NOT NULL,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Password varchar(255),
+  	PRIMARY KEY (AdminID)
+);
