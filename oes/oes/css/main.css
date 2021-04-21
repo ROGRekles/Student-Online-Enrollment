@@ -181,6 +181,21 @@ hr{
     padding-left: 10px;
 
 }
+.save-enrol-btn{
+    margin-left: 40%;
+    margin-top : 3%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    cursor: pointner;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
 
 /* footer */
 
