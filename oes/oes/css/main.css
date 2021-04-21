@@ -131,9 +131,9 @@ hr{
 }
 
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
     background-color: #f2f2f2;
-}
+} */
 
 
 .save-btn{
@@ -150,14 +150,42 @@ tr:nth-child(even) {
     font-size: 15px;
     text-transform: uppercase;
     color: white;
+    cursor: pointner;
     font-weight: bold;
 }
 
 
+
+/* profile */
+.user-img{
+    height: auto;
+    width: 10px;
+    float:left;
+    margin-left: 100px;
+}
+
+.user-info{
+    width: 40%;
+    margin-left: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border-collapse: collapse;
+}
+.user-info table tr{
+    font-weight: bold;
+}
+
+.user-info table tr td{
+    height:30px;
+    border-bottom: 1px solid lightgrey;
+
+}
+
 /* footer */
 
 .footer{
-    margin-top: 5%;
+    margin-top: 10%;
     background-color: lightgray;
     padding:3%;
+    
 }
