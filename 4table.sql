@@ -34,3 +34,10 @@ CREATE TABLE Semester (
  	PRIMARY KEY (SemesterName),
   	FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
+CREATE TABLE Student (
+    AdminID INT NOT NULL,
+    LastName varchar(255),
+    FirstName varchar(255),
+  	Password varchar(255),
+  	PRIMARY KEY (AdminID)
+);
