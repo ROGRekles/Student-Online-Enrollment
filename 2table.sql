@@ -3,11 +3,11 @@ CREATE TABLE Student (
     LastName varchar(255),
     FirstName varchar(255),
     DoB varchar(255),
+    Major varchar(255),
+    GPA varchar(255),
     CreditPoint varchar(255),
- 	GPA varchar(255),
- 	CreditPoint varchar(255),
-  	Campus varchar(255),
-  	Password varchar(255),
+    Campus varchar(255),
+    Password varchar(255),
   	PRIMARY KEY (StudentID)
 );
 CREATE TABLE Course (
@@ -16,8 +16,8 @@ CREATE TABLE Course (
     MaxCapacity INT,
     Description varchar(1000),
     Requirement varchar(255),
- 	SuggestedCourse varchar(255),
-  	Lecturer varchar(255),
-  	Semester varchar(255),
- 	PRIMARY KEY (CourseID)
+    SuggestedCourse varchar(255),
+    Lecturer varchar(255),
+    Semester varchar(255),
+    PRIMARY KEY (CourseID)
 );
