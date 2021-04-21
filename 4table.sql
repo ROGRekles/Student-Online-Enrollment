@@ -3,7 +3,7 @@ CREATE TABLE Student (
     LastName varchar(255),
     FirstName varchar(255),
     DoB varchar(255),
-    CreditPoint varchar(255),
+    Major varchar(255),
  	GPA varchar(255),
  	CreditPoint varchar(255),
   	Campus varchar(255),
