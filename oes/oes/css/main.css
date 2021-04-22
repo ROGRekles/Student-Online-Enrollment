@@ -182,9 +182,9 @@ hr{
 
 }
 .save-enrol-btn{
-    margin-left: 40%;
+    margin-left: 50%;
     margin-top : 3%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     width: 100px;
     height: 34px;
     border: none;

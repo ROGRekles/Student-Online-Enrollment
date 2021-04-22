@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: serif;
+}
+
+.logo{
+    height: 50px;
+    margin: 20px 10px 10px 20px;
+    float: top;
+}
+
+.header{
+    color:black;
+}
+
+.nagivate-bar{
+    height: 50px;
+    top: 0;
+
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgb(68, 68, 68);
+    z-index: 2;
+}
+
+
+.menu-bar ul{
+    display: inline-flex;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+.menu-bar ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.menu-bar ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    font-style:inherit;
+}
+
+
+hr{
+    display:flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-width: 1px;
+}
+
+
+
+
+/* footer */
+
+.footer{
+    margin-top: 10%;
+    background-color: lightgray;
+    padding:3%;
+    
+}
+
+
+
+/* table */
+.course-table {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 15px;
+    padding: 20px;
+    border:solid;
+
+}
+    
+.course-table td { 
+    width: 600px;
+    padding: 10px;
+    margin:20px;
+    border:solid;
+    border-width: 1.5px;
+    border-color: black;
+}
+    
+.course-table tr .course-name {
+    height: 50px; 
+    text-align: center;
+}
+    
+.course-table tr .pre-requisites {
+    height: 50px; 
+    text-align: center;
+}
+    
+.course-table tr  .credit-point {
+    height: 50px; 
+    text-align: center;
+}
+    
+.course-table tr  .course-description {
+    height: 200px;
+
+}
+    
+.course-table tr .suggestion-path {
+    height:200px;
+}
