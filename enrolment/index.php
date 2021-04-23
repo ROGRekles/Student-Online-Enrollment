@@ -63,73 +63,8 @@
 			<input style="margin: 5px;" type="submit" name="login" value="Login">
 		</div>
 	</form>
-	<script>
 
-		function student() {
-		    var x = document.getElementById('student');
-		    if (x.style.display == 'block') {
-		        x.style.display = 'none';
-		    } 
-		    else {
-		        x.style.display = 'block';
-		    }
-		}
-	</script>
-	<div style="background-color: #d8dedc;">
-		<form action="insert_db.php" method="POST">
-			<div style="margin-left: 430px; padding: 25px; padding-top: 10px; padding-bottom: 5px;">
-				<b style="font-size: 30px; font-style: bold; font-family: all;">New Registration Form</b><br>		
-				<div style="width: 470px;">
-					<div class="flex"><input class="input" type="text" name="rmit_student_id" placeholder="Student ID" required></div><br>
-					<div class="flex"><input class="input" type="text" name="name" placeholder="Full Name" required></div><br>
-
-					<div class="flex"><input class="input" type="email" name="email" placeholder="Email Address" required></div><br>
-
-					<div class="flex" style="width: 208px;"> <input style="width: 160px;" class="input" type="password" name="password" placeholder="New Password" required></div>
-
-					<div class="flex"><input style="width: 160px;" class="input" type="password" name="confirm_password" placeholder="Confirm Password" required></div><br>
-
-					<div class="flex" style="width: 168px; margin-top: 30px;"> <b>Date of Birth:</b></div>
-					<div class="flex"><input style="width: 200px;" class="input" type="Date" name="date_of_birth" placeholder="DD/MM/YY" required></div><br>
-
-					<div class="flex" style="width: 200px; margin-top: 25px;"> <b>Click your identity:</b></div>
-					<div class="flex" style="margin-top: 5px; margin-left: 35px;">
-						<input type="radio" name="sex" value="Male" required>Male
-						<input type="radio" name="sex" value="Female">Female
-					</div><br>
-					<div class="flex"><input class="input" type="number" step="any" name="credit_point" placeholder="Credit Point" required></div><br>
-					<div class="flex"><input class="input" type="number" step="any" name="gpa" placeholder="GPA" required></div><br>
-					<div class="flex"><input class="input" type="text" name="campus" placeholder="Your Campus" required></div><br>
-					<div class="flex"><input class="input" type="text" name="major" placeholder="Your Major" required></div><br>
-					
-
-					<div class="flex" style="width: 148px;"> Upload Photo:</div>
-					<div class="flex"><input class="input" style="height: 35px; width: 258px; padding-left: 0px;" type="file" name="photo" required></div><br>
-
-					<div class="flex" style="width: 165px; margin-top: 30px;"> <b>Click your job :</b></div>
-					<div class="flex">
-						<div style=" margin-top: 5px;">
-							<select required style="margin: 5px; width: 225px; height: 45px; background-color: #d4e1cc; font-weight: bold;" class="input" name="c_type">
-								<option type="button" value="">None</option>
-								<option type="button" onclick="student()" value="student">I am Student</option>
-							</select>
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="flex"><input class="input" style="margin-left: 456px; height: 45px; width: 150px; margin-top: 5px; border-radius: 5px; background-color: #1c26f6; font-weight: bold; color: white; margin-bottom: 10px;" type="reset" value="Reset"></div>
-
-			<div class="flex"><input class="input" style="margin-left: 430px; width: 170px; height: 45px; margin-top: 5px; margin-left: 73px; border-radius: 5px; background-color: #1c26f6; font-weight: bold; color: white;" type="submit" value="Register"></div>
-		</form>
-	</div>
-
-	<footer style="background-color: gray; height: 65px;">
-		<div style="padding-top: 10px; padding-left: 25px;">&copy; 2018 College Portal</div>
-		<div style="padding-bottom: 15px; padding-left: 25px;">Powred by Indra Bahadur Oli &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; This web application is best view in Firefox Quantum 62.0 and Chrome.</div>
-	</footer>
+	
 
 </body>
 </html>
