@@ -1,0 +1,207 @@
+/* basic setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: serif;
+}
+
+.logo{
+    height: 50px;
+    margin: 20px 10px 10px 20px;
+    float: top;
+}
+
+.header{
+    color:black;
+}
+
+.nagivate-bar{
+    height: 50px;
+    top: 0;
+
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgb(68, 68, 68);
+    z-index: 2;
+}
+
+
+.menu-bar ul{
+    display: inline-flex;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+.menu-bar ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.menu-bar ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    font-style:inherit;
+}
+
+
+hr{
+    display:flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-width: 1px;
+}
+
+/* body */
+.container {
+    margin: auto;
+    width: 400px;
+    max-width: 90%;
+ 
+}
+
+.container form {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    margin-top: 30%;
+}
+
+.container form h2 {
+    text-align: center;
+    margin-bottom: 10%;
+    color: black;
+}
+
+.container form .form-control {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.container form .btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    cursor: pointner;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.t1 {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.active-t1 th{
+    width: 140px;
+    height: 30px;
+    border-bottom: 2px solid #009879;
+}
+
+.t1 tr td{
+    height:40px;
+}
+
+
+/* tr:nth-child(even) {
+    background-color: #f2f2f2;
+} */
+
+
+.save-btn{
+    display : flex;
+    justify-content: right;
+    float: right;
+    transform: translateX(-50%);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointner;
+    font-weight: bold;
+}
+
+
+
+/* profile */
+.user-img{
+    height: auto;
+    width: 10px;
+    float:left;
+    margin-left: 100px;
+}
+
+.user-info{
+    width: 40%;
+    margin-left: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border-collapse: collapse;
+}
+.user-info table tr{
+    font-weight: bold;
+}
+
+.user-info table tr td{
+    height:30px;
+    border-bottom: 1px solid lightgrey;
+    padding-left: 10px;
+
+}
+.save-enrol-btn{
+    margin-left: 50%;
+    margin-top : 3%;
+    /* transform: translateX(-50%); */
+    width: 100px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    cursor: pointner;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* footer */
+
+.footer{
+    margin-top: 10%;
+    background-color: lightgray;
+    padding:3%;
+    
+}
