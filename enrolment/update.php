@@ -24,12 +24,12 @@
 			Email:<input required type="email" name="email" value=<?=$row['email'];?>><br/>
 			Password:<input required type="text" name="password" value=<?=$row['password'];?>><br/>
 			Date of Birth:<input required type="date" name="dob" value=<?=$row['date_of_birth'];?>><br/>
-			Gender:<input required type="text" name="gender" value=<?=$row['Gender'];?>><br/>
+			Gender:<input required type="text" name="Gender" value=<?=$row['Gender'];?>><br/>
 			Credit Point:<input required type="number" step="any" name="credit_point" value=<?=$row['credit_point'];?>><br/>
 			GPA:<input required type="number" step="any" name="gpa" value=<?=$row['gpa'];?>><br/>
 			Photo:<input style="padding-left: 0px;" type="file" name="photo" value=<?=$row['photo'];?>><br/>
-			Campus:<input required type="text" name="address" value=<?=$row['campus'];?>><br/>
-			Major:<input required type="text" name="course" value=<?=$row['major'];?>><br/>
+			Campus:<input required type="text" name="campus" value=<?=$row['campus'];?>><br/>
+			Major:<input required type="text" name="major" value=<?=$row['major'];?>><br/>
 			<input style="width: auto; margin-top: 10px;" type="submit" name="submit" value="Update">
 		</form>
 	<?php
@@ -95,8 +95,8 @@
 			Credit Point<input required type="number" step="any" name="credit_point" placeholder="Credit Point"><br/>
 			GPA<input required type="number" step="any" name="gpa" placeholder="GPA"><br/>
 			Photo<input style="padding-left: 0px;" type="file" name="photo" ><br/>
-			Campus<input required type="text" name="campus" placeholder="address"><br/>
-			Major<input required type="text" name="major" placeholder="course"><br/>
+			Campus<input required type="text" name="campus" placeholder="campus"><br/>
+			Major<input required type="text" name="major" placeholder="major"><br/>
 			<input style="width: auto; margin-top: 10px;" type="submit" name="submit" value="Register">
 		</form>
 	<?php

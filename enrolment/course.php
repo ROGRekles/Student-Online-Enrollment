@@ -17,7 +17,7 @@ require('connection_db.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>College portal teacher pannel</title>
+	<title>Course panel</title>
 	<style type="text/css">
 		body{
 			background: #f1f1f1;
@@ -149,11 +149,6 @@ require('connection_db.php');
 			}
 		?> 
 	</div>
-	
-	<footer style="background-color: gray; height: 65px;">
-		<div style="padding-top: 10px; padding-left: 25px;">&copy; 2018 College Portal</div>
-		<div style="padding-bottom: 15px; padding-left: 25px;">Powred by Indra Bahadur Oli &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; This web application is best view in Firefox Quantum 62.0 and Chrome.</div>
-	</footer>
 
 </body>
 </html>

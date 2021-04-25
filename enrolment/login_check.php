@@ -8,7 +8,7 @@
 	$loginType=$_POST["login_type"];
 
 	if ($loginType == "admin") {
-		if ($name == "admin" && $pass == "indra") {
+		if ($name == "admin" && $pass == "admin") {
 			$_SESSION['user']=$name;
 			$_SESSION['pass']=$pass;
 			$_SESSION['login']=$loginType;

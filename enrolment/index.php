@@ -1,70 +1,106 @@
+<!-- php -->
+
 <?php
-	session_start();
-		if(isset($_SESSION['login']))
-		{
-			header('Location:'.$_SESSION['login'].".php");
-		}
-		elseif(isset($_SESSION['message']))
-		{	
-			echo '<script type="text/javascript">alert("'.$_SESSION['message'].'");</script>';
-			header('Refresh:0');
-			session_destroy();
-		}
-		elseif(isset($_SESSION['error']))
-		{
-			echo '<script type="text/javascript">alert("'.$_SESSION['error'].'");</script>';
-			header('Refresh:0');
-			session_destroy();
-		}
-		elseif (isset($_SESSION['n_user'])) {
-			echo '<script type="text/javascript">alert("'.$_SESSION['n_user'].'");</script>';
-			header('Refresh:0');
-			session_destroy();
-		}
-	?>
+session_start();
+if (isset($_SESSION['login'])) {
+	header('Location:' . $_SESSION['login'] . ".php");
+} elseif (isset($_SESSION['message'])) {
+	echo '<script type="text/javascript">alert("' . $_SESSION['message'] . '");</script>';
+	header('Refresh:0');
+	session_destroy();
+} elseif (isset($_SESSION['error'])) {
+	echo '<script type="text/javascript">alert("' . $_SESSION['error'] . '");</script>';
+	header('Refresh:0');
+	session_destroy();
+} elseif (isset($_SESSION['n_user'])) {
+	echo '<script type="text/javascript">alert("' . $_SESSION['n_user'] . '");</script>';
+	header('Refresh:0');
+	session_destroy();
+}
+?>
+
+
+<!-- html -->
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Student Registration Form</title>
-	<style type="text/css">
-		body{
-			background: #f1f1f1;
-		}
-		.input{
-			width: 373px;
-			margin-top: 10px;
-			height: 30px; 
-			padding-left: 15px;
-			font-size: 18px;
-		}
-		.flex{
-			display: inline-flex;
-		}
-	</style>
 
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+	<link href="../enrolment/css/main.css" rel="stylesheet" />
+
+	<title>OES Login Form</title>
+	<table>
+		<tr>
+			<td><img src="../enrolment/image/logo.jpg" alt="logo" class="logo"> </td>
+			<td>
+				<h2 class="header">Online Enrolment System</h2>
+			</td>
+		</tr>
+	</table>
+	<hr>
 </head>
 
 <body>
-	<form style="background-color: darkblue; height: 80px; padding-top: 10px;" action="login_check.php" method="POST">
-		<div style="padding: 10px; width: 450px; display: inline-flex; ">
-			<b style="font-family: cursive; font-size: 35px; color: #ed854d; margin-left: 75px;">College Portal</b>
-		</div>
-		<div align="right" style="margin-left: 240px; display: inline; width: 700px;">
-			<select style="margin: 5px;" name="login_type">
+	<!-- Old version -->
+	<!-- <form action="login_check.php" method="POST">
+
+		
+		<div>
+			<select name="login_type">
 				<option value="admin">Admin</option>
 				<option value="student">Student</option>
 			</select>
 
 			<div class="flex">
-				<div><input style="width: 180px; margin: 5px;" type="text" name="username" placeholder="username/email" required></div>
-				
-				<div><input style="width: 130px; margin: 5px;" type="password" name="password" placeholder="password" required></div>
+				<div><input type="text" name="username" placeholder="ID" required></div>
+				<div><input type="password" name="password" placeholder="password" required></div>
 			</div>
-			<input style="margin: 5px;" type="submit" name="login" value="Login">
-		</div>
-	</form>
 
-	
+			<input type="submit" name="login" value="Login">
+		</div>
+	</form> -->
+
+
+	<!-- new version -->
+	<div class="container">
+
+		<form action="login_check.php" method="POST">
+			<h2>Welcome to OES</h2>
+
+			<select name="login_type" style="float:right;">
+				<option value="admin">Admin</option>
+				<option value="student">Student</option>
+			</select>
+
+			<div class="flex">
+				<input type="text" class="form-control" placeholder="ID" name="username"  required>
+				<input type="password" class="form-control" placeholder="password" name="password"  required>
+			</div>
+
+			<input type="submit" class="btn" name="login" value="Login">
+		</form>
+	</div>
 
 </body>
+
+<footer class="footer">
+
+	<div>
+		<p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
+		<p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
+	</div>
+
+	<div>&copy;
+		<script>
+			document.write(new Date().getFullYear());
+		</script>
+	</div>
+
+	<div>
+		Disclaimer: This website is not a real website
+	</div>
+
+</footer>
+
+
 </html>

@@ -17,7 +17,7 @@ require('connection_db.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>College portal student pannel</title>
+	<title>Student pannel</title>
 	<style type="text/css">
 		body{
 			background: #f1f1f1;
