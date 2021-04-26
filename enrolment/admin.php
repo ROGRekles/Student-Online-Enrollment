@@ -35,20 +35,20 @@ if (isset($_POST['logout'])) {
 			<td><img src="../enrolment/image/logo.jpg" alt="logo" class="logo"> </td>
 			
 			<td>
-				<h2 class="header">Online Enrolment System</h2>
+				<h2 class="header" style ="width:300px;">Online Enrolment System</h2>
 			</td>
 
 			<td>
 				<div>
 					<div style="float: right;">
-						<b style="font-size: 20px;  margin:0 0 0 700px; display: inline-flex; float:right; item-align:left;"><?php echo "Welcome, " . $user ?></b>
+						<b style="font-size: 20px;  padding:0 0 0 500px;"><?php echo "Welcome, " . $user ?></b>
 					</div>
 				</div>
 			</td>
 
 			<td>
 				<form style=" float : right;" action="#" method="POST">
-					<input style = "   height: 20px; border: none;outline: none; background: none; font-size: 15px; text-transform: uppercase; cursor: pointer;"
+					<input style = "height: 30px; border: 1px solid red;background: none; font-size: 15px; text-transform: uppercase; cursor: pointer;"
 					type="submit" name="logout" value="Log out"  >
 				</form>
 			</td>
@@ -84,6 +84,7 @@ if (isset($_POST['logout'])) {
 			text-align: center;
 			background-color: #808080;
 			color: white;
+			padding:2.5px;
 		}
 
 		td {
@@ -116,11 +117,11 @@ if (isset($_POST['logout'])) {
 		} else {
 		?>
 			<br>
-			<b style="font-size:25px; margin:10px;">Student</b>
+			<b style="font-size:25px; margin:20px;">Student</b>
 			
 			<br><br>
 			
-			<table style="margin-left: 10px; margin-right: 10px;" border="1px">
+			<table style="margin-left: 20px; margin-right: 10px;" border="1px">
 				<tr>
 					<th>S.N</th>
 					<th>Student ID</th>
@@ -180,9 +181,9 @@ if (isset($_POST['logout'])) {
 		} else {
 		?>
 			<br>
-			<b style="font-size:25px;margin:10px">Course</b>
+			<b style="font-size:25px;margin:20px ">Course</b>
 			<br><br>
-			<table style="margin-left: 10px; margin-right: 10px;" border="1px">
+			<table style="margin-left: 20px; margin-right: 10px;" border="1px">
 				<tr>
 					<th>C.N</th>
 					<th>Course ID</th>
@@ -197,7 +198,6 @@ if (isset($_POST['logout'])) {
 					<th>Third Semester</th>
 					<th>Update</th>
 					<th>Delete</th>
-
 				</tr>
 
 				<?php

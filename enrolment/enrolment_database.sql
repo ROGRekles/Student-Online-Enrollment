@@ -55,8 +55,23 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`) VALUES
-(1, 'COSC2143', 'Webprogramming', 100, 'Basic course for student to learn various thing about database', 'Introduction to Information Technology', 'Advanced Programming Technique','Minh Thanh Vu','Available','Available' ,'Not Available');
+INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+ VALUES(1, 'COSC0001', 'Web programming', 100, 'Basic course for student to learn various thing about Web programming', 'Introduction to Information Technology', 'Advanced Programming Technique','Minh Thanh Vu','Available','Available' ,'Not Available');
+ 
+INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+ VALUES(2, 'COSC0002', 'Introduction to Inormation Technology', 100, 'Basic course for student to learn various thing about IT', 'None', 'Introduction to programming','John Smith','Available','Available' ,'Not Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+ VALUES(3, 'COSC0003', 'Practical Database Concept', 100, 'Learning about the basic knowledge about database with php and mySQL','None','Building IT System','Sara Han','Available','Not Available' ,'Available');
+
+  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+ VALUES(4, 'COSC0004', 'Practical Sata Science', 100, 'Learning about the basic knowledge about datab Science','Programming 1','Data Science: Advance','Tyson Lee','Available','Not Available' ,'Available');
+
+  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+ VALUES(5, 'COSC0005', 'Software Engineering Fundamentals for IT', 100, 'Learning about the basic knowledge with project based class','Building IT System','Capstone 1','Minh Thanh Vu','Not Available','Available' ,'Available');
+
+
+
 
 --
 -- Indexes for table `student`
@@ -70,15 +85,18 @@ ALTER TABLE `student`
 ALTER TABLE `course`
   ADD PRIMARY KEY (`course_id`);
 
---
--- AUTO_INCREMENT for table `student`
---
-ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
---
--- AUTO_INCREMENT for table `course`
---
-ALTER TABLE `course`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
+
+
+-- --
+-- -- AUTO_INCREMENT for table `student`
+-- --
+-- ALTER TABLE `student`
+--   MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+-- --
+-- -- AUTO_INCREMENT for table `course`
+-- --
+-- ALTER TABLE `course`
+--   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+-- COMMIT;

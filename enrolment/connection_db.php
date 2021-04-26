@@ -1,17 +1,15 @@
 <?php
 	$servername="localhost";
-	$username="httrung227";
+	$username="admin";
 	$password="";
-	$dbName="enrolment_database";
+	$dbName="portal_college2";
 
 
+	// Checking the localhost connection 
 	$connectivity=mysqli_connect($servername,$username,$password,$dbName);
 
-	// Checking the localhost connection if needed
-	/*
-	if (!$connectivity) {
-		die("Connection failed: " . mysqli_connect_error());
-	  }
-	  echo "Connected successfully";
-	*/
+	// if (!$connectivity) {
+	// 	die("Connection failed: " . mysqli_connect_error());
+	//   }
+	//   echo "Connected successfully";
 ?>

@@ -116,7 +116,7 @@ require('connection_db.php');
 				<button style="height: 37px; margin-top: -8px;" type="button" onclick="password()">Show/Hide</button>
 			</div><br>
 				<table style="margin-left: 10px; margin-right: 10px;" border="1px">
-					<tr>
+					<tr style="padding:10px;">
 						<th>Teacher ID</th>
 						<th>Name</th>
 						<th>Email</th>

@@ -43,19 +43,16 @@ if (isset($_SESSION['login'])) {
 <body>
 	<!-- Old version -->
 	<!-- <form action="login_check.php" method="POST">
-
 		
 		<div>
 			<select name="login_type">
 				<option value="admin">Admin</option>
 				<option value="student">Student</option>
 			</select>
-
 			<div class="flex">
 				<div><input type="text" name="username" placeholder="ID" required></div>
 				<div><input type="password" name="password" placeholder="password" required></div>
 			</div>
-
 			<input type="submit" name="login" value="Login">
 		</div>
 	</form> -->

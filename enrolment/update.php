@@ -115,16 +115,16 @@
 		<b style="margin-left: 400px; font-size: 30px;">Course Registration Form</b> @admin
 		<form style="margin-left: 400px; width: 250px;" action="update_by_admin.php" method="POST">
 			<input required type="hidden" name="c_type" value="course"><br/>
-			Course ID<input required type="text" name="rmit_course_id" pattern="[A-Z]{4}[0-9]{4}" title="Must be 4 uppercase letters and then 4 numbers following"  placeholder="Course ID"><br/>
+			Course ID<input required type="text" name="rmit_course_id" pattern="[A-Z]{4}[0-9]{4}" title="Must be 4 uppercase letters and then 4 numbers following"  placeholder="COSC0000"><br/>
 			Title:<input required type="text" name="title" placeholder="Title"><br/>
 			Max Capacity:<input required type="text" name="max_capacity" placeholder="Max Capacity"><br/>
-			Description:<input required type="text" name="description" placeholder="Description"><br/>
+			Description:<input required type="text" name="description" placeholder="Description" style=" height:200px;"><br/>
 			Requirement<input required type="text" name="requirement" placeholder="Requirement"><br/>
 			Unlocked Course:<input required type="text" name="unlocked_course" placeholder="Unlocked Course"><br/>
 			Lecturer:<input required type="text" name="lecturer" placeholder="Lecturer"><br/>
-			First Semester:<input required type="text" name="first_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="First Semester"><br/>
-			Second Semester:<input required type="text" name="second_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="Second Semester"><br/>
-			Third Semester:<input required type="text" name="third_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="Third Semester"><br/>
+			First Semester:<input required type="text" name="first_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="Available/Not Available"><br/>
+			Second Semester:<input required type="text" name="second_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="Available/Not Available"><br/>
+			Third Semester:<input required type="text" name="third_semester" pattern="Available|Not\ Available" title="Must be either Available/Not Available"  placeholder="Available/Not Available"><br/>
 			<input style="width: auto; margin-top: 10px;" type="submit" name="submit" value="Register">
 		</form>
 	<?php
