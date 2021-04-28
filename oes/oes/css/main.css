@@ -29,6 +29,7 @@ body {
 }
 
 
+
 .menu-bar ul{
     display: inline-flex;
     margin-left: 25%;
@@ -44,10 +45,14 @@ body {
   
 .menu-bar ul li a{
     font-size: 20px;
-    font-weight: bold;
     color: black;
     cursor: pointer;
-    font-style:inherit;
+    text-decoration: none;
+    
+}
+
+.menu-bar ul li a:hover {
+    text-decoration: underline #009879;
 }
 
 
