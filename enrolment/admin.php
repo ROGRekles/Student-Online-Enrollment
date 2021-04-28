@@ -32,28 +32,19 @@ if (isset($_POST['logout'])) {
 
 	<table>
 		<tr>
-			<td><img src="../enrolment/image/logo.jpg" alt="logo" class="logo"> </td>
+			<td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
+			<td>
+				<h2 class="header">Online Enrolment System</h2>
+			</td>
+    		<form action="#" method="POST">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="logout" value="Log out" class="logout-btn">
+			</form>
 			
-			<td>
-				<h2 class="header" style ="width:300px;">Online Enrolment System</h2>
-			</td>
-
-			<td>
-				<div>
-					<div style="float: right;">
-						<b style="font-size: 20px;  padding:0 0 0 500px;"><?php echo "Welcome, " . $user ?></b>
-					</div>
-				</div>
-			</td>
-
-			<td>
-				<form style=" float : right;" action="#" method="POST">
-					<input style = "height: 30px; border: 1px solid red;background: none; font-size: 15px; text-transform: uppercase; cursor: pointer;"
-					type="submit" name="logout" value="Log out"  >
-				</form>
-			</td>
+            <b style=" padding:10px; float:right;"><?php echo "Welcome, " . $user ?></b>
 		</tr>
-
 	</table>
 	<hr>
 
@@ -84,7 +75,7 @@ if (isset($_POST['logout'])) {
 			text-align: center;
 			background-color: #808080;
 			color: white;
-			padding:2.5px;
+			padding: 2.5px;
 		}
 
 		td {
@@ -106,7 +97,7 @@ if (isset($_POST['logout'])) {
 
 
 
-<!-- student -->
+	<!-- student -->
 	<div style=" height: auto;">
 		<?php
 		$sql = "SELECT * FROM student";
@@ -118,9 +109,9 @@ if (isset($_POST['logout'])) {
 		?>
 			<br>
 			<b style="font-size:25px; margin:20px;">Student</b>
-			
+
 			<br><br>
-			
+
 			<table style="margin-left: 20px; margin-right: 10px;" border="1px">
 				<tr>
 					<th>S.N</th>
@@ -165,12 +156,12 @@ if (isset($_POST['logout'])) {
 		<?php
 		}
 		?>
-		
+
 		<!-- add student btn -->
 		<br>
 		<a style="float:right; margin:0 50px 0 0;" href="update.php?user='student'">Add new Student</a>
 		<br><br>
-		
+
 		<!-- course -->
 		<?php
 		$sql = "SELECT * FROM course";
@@ -235,7 +226,7 @@ if (isset($_POST['logout'])) {
 
 
 <!-- footer -->
-<footer class="footer" >
+<footer class="footer">
 	<div>
 		<p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
 		<p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
