@@ -147,14 +147,6 @@ if (isset($_POST['logout'])) {
 
 		</div>
 
-		<div>
-			<table style="float:left;">
-				<tr>
-					<td><a href="update.php?s_id=<?= $student_id; ?>"><input class="save-enrol-btn" type="submit" value="Update"></a></td>
-					<td><a href="insert_db.php?st_id=<?= $student_id; ?>"><input class="save-enrol-btn" type="submit" value="Delete"></a></td>
-				</tr>
-			</table>
-		</div>
 
 
 
