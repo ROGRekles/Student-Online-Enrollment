@@ -47,14 +47,17 @@ body {
     font-size: 20px;
     color: black;
     cursor: pointer;
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 .menu-bar ul li a:hover {
     text-decoration: underline #009879;
 }
 
+
+.menu-bar ul li a:active {
+    font-weight: bold;
+}
 
 hr{
     display:flex;
