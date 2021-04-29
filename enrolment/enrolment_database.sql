@@ -30,6 +30,9 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`student_id`,`rmit_student_id`, `name`, `email`, `password`, `date_of_birth`, `Gender`,`credit_point`,`gpa`, `photo`, `campus`, `major`) VALUES
 (1,'S3836390', 'Hua Tien Trung', 'huatientrung01@gmail.com', 'huatientrung', '1999-07-22', 'Male','148','2.9' ,'avatar.jpg', 'Viet Nam - South Saigon', 'Information Technology');
+INSERT INTO `student` (`student_id`,`rmit_student_id`, `name`, `email`, `password`, `date_of_birth`, `Gender`,`credit_point`,`gpa`, `photo`, `campus`, `major`) VALUES
+(2,'s3821179', 'Han sang yeob', 'ttonytony774@gmail.com', 'tonytony774', '1990-06-10', 'Male','100','5.0' ,"user_img.png", 'Viet Nam - South Saigon', 'Information Technology');
+
 
 -- --------------------------------------------------------
 
@@ -55,22 +58,48 @@ CREATE TABLE `course` (
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
- VALUES(1, 'COSC0001', 'Web programming', 100, 'Basic course for student to learn various thing about Web programming', 'Introduction to Information Technology', 'Advanced Programming Technique','Minh Thanh Vu','Available','Available' ,'Not Available');
- 
-INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
- VALUES(2, 'COSC0002', 'Introduction to Inormation Technology', 100, 'Basic course for student to learn various thing about IT', 'None', 'Introduction to programming','John Smith','Available','Available' ,'Not Available');
+--
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(1, 'COSC0001', 'Introduction to Information Technology', 100, 'Basic course for student to learn various thing about IT', 'None', 'None','John Smith','Available','Available' ,'Not Available');
 
  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
- VALUES(3, 'COSC0003', 'Practical Database Concept', 100, 'Learning about the basic knowledge about database with php and mySQL','None','Building IT System','Sara Han','Available','Not Available' ,'Available');
+  VALUES(2, 'COSC0002', 'Introduction to programming', 100, 'Take First Step Towards Software Engineering Career- Introduction to Java. Write Programs. Learn Programming Concepts, Web Development using HTML, CSS, JavaScript, Design Algorithms. Earn a Degree. Flexible Online Learning. Find A Course. Achieve Your Goals.', 'None', 'Building IT system','John Smith','Available','Available' ,'Not Available');
 
-  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
- VALUES(4, 'COSC0004', 'Practical Sata Science', 100, 'Learning about the basic knowledge about datab Science','Programming 1','Data Science: Advance','Tyson Lee','Available','Not Available' ,'Available');
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(3, 'COSC0003', 'Practical Database Concepts', 100, 'The main purpose of this course is to relate the academic theories with the real world database practices. The course starts with most basic academic theories that one has to memorize in academia and then it will effort to relate them with their practical knowledge with some relevant examples in a question-answer manner.','None','None','Sara Han','Available','Not Available' ,'Available');
 
-  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
- VALUES(5, 'COSC0005', 'Software Engineering Fundamentals for IT', 100, 'Learning about the basic knowledge with project based class','Building IT System','Capstone 1','Minh Thanh Vu','Not Available','Available' ,'Available');
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(4, 'COSC0004', 'Intro to Computer systems and platform', 100, 'Intro to Computer systems and platform is a course which student can learn about basic knowledge about computer system and how it works with various platform','None','None','Olivia Han','Available','Not Available' ,'Available');
 
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(5, 'COSC0005', 'User Centred Design', 100, 'User-centered design (UCD) is an iterative design process in which designers focus on the users and their needs in each phase of the design process. In UCD, design teams involve users throughout the design process via a variety of research and design techniques, to create highly usable and accessible products for them.','None','None','Samantha','Available','Not Available' ,'Available');
 
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(6, 'COSC0006', 'Security in Computing and Information Technology', 100, 'Secure a solid technical grasp of IT security systems. Clarify and assess security measures and privacy issues across diverse digital platforms. Verify and protect data. Lock in a career as an IT security expert in a high demand, growth industry.','Introduction to security in computing','None','Sara HanRose','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(7, 'COSC0007', 'Introduction to security in computing', 100, 'Computer security basically is the protection of computer systems and information from harm, theft, and unauthorized use. It is the process of preventing and detecting unauthorized use of your computer system. There are various types of computer security which is widely used to protect the valuable information of an organization.','None','Security in Computing and Information Technology','Sara Han','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(8, 'COSC0008', 'Building IT System', 100, 'On a conceptual level, building an IT system is no different than building a broadcast system. The differences are in the functions, capabilities and limitations of hardware, software and applications hosted on the system. If you are a successful broadcast-system builder, you can handle IT systems.','Introduction to programming','None','Rose','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(9, 'COSC0009', 'Web programming', 100, 'Web programming refers to the writing, markup and coding involved in Web development, which includes Web content, Web client and server scripting and network security. The most common languages used for Web programming are XML, HTML, JavaScript, Perl 5 and PHP. Web programming is different from just programming, which requires interdisciplinary knowledge on the application area, client and server scripting, and database technology.','Introduction to programming','None','Sara Han','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(10, 'COSC0010', 'Software Engineering Fundamentals for IT', 100, 'Learn Java’s Object-Oriented Concepts, Web Development using HTML, CSS, JavaScript. Use Arrays, Data Structures, API Documentation, Build & Debug Programs, Design Algorithms. Earn a Degree. Get Ready for a Career. Find A Course. Achieve Your Goals.','Introduction to programming','None','Minh Thanh Vu','Not Available','Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(11, 'COSC0011', 'Professional Computing practice', 100, 'Consequently, this four-part book makes a suitable resource for a two-semester undergraduate course in professional practice and career development in universities and colleges. With its comprehensive coverage of a large variety of topics, each part of the book can be used as a reference for other related courses where sustainability, leadership, systems thinking and professional practice are evident and increasingly visible.','Software Engineering Fundamentals for IT','None','Sara Han','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(12, 'COSC0012', 'Software Engineering Project Management', 100, 'Software Project Management (SPM) is a proper way of planning and leading software projects. It is a part of project management in which software projects are planned, implemented, monitored and controlled.','Software Engineering Fundamentals for IT','Prmgramming Project 1','Tyson Lee','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(13, 'COSC0013', 'Programing Project 1', 100, 'The best way to begin to learn to code is to simply start coding! You may try taking on a complex web development project to start, however, you may find yourself abandoning it out of frustration or difficulty. The most important thing is to keep on going. When you gain experience developing challenging projects from inception to completion, you establish a strong work ethic that will benefit you throughout your career. So, where do you get started? You can build your own portfolio on sites like GitHub, and you may also want to host your own website to show off your past projects. ','Software Engineering Project Management','Programming Project 2','Tyson Lee','Available','Not Available' ,'Available');
+
+ INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+  VALUES(14, 'COSC0014', 'Programing Project 2', 100, 'This course will outline 10 development projects to help you build and add to your portfolio as a junior developer. You may also be interested in our previous blog post on How to Move From Junior to Senior Web Developer.','Programming 1','Data Science: Advance','Rose','Available','Not Available' ,'Available');
 
 
 --
@@ -88,15 +117,15 @@ ALTER TABLE `course`
 
 
 
--- --
--- -- AUTO_INCREMENT for table `student`
--- --
--- ALTER TABLE `student`
---   MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
--- --
--- -- AUTO_INCREMENT for table `course`
--- --
--- ALTER TABLE `course`
---   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
--- COMMIT;
+--
+-- AUTO_INCREMENT for table `course`
+--
+ALTER TABLE `course`
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
