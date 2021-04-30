@@ -52,9 +52,6 @@ if (isset($_POST['logout'])) {
 
 
 <body>
-
-
-
 <h2>Download</h2>
 
 

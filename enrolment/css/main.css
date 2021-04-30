@@ -39,7 +39,7 @@ body {
 
 .menu-bar ul li{
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     text-align: center;
     cursor: pointer;
 }
