@@ -70,7 +70,7 @@ if (isset($_SESSION['login'])) {
 			</select>
 
 			<div class="flex">
-				<input type="text" class="form-control" placeholder="ID" name="username"  required>
+				<input type="text" class="form-control" placeholder="Email" name="username"  required>
 				<input type="password" class="form-control" placeholder="password" name="password"  required>
 			</div>
 
