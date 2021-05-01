@@ -53,11 +53,17 @@ if (isset($_POST['logout'])) {
 
 
 <body>
-<img src="../enrolment/image/SEPM.png" alt="program_map" style="width: 40%;">
-<a href="../enrolment/image/SEPM.png" download style="float:right; margin:10px 400px 10px 10px;cursor: pointer;
+<div class="heading">
+    <h2 style="padding: 0 0 10px 30px">Program Map</h2>
+</div>
+<div>
+<a href="../enrolment/image/SEPM.png" download style="float:right; margin:10px 50px 10px 10px;cursor: pointer;
      color:black; text-decoration:none;">Download program_map.png</a>
+</div>
 
-
+<div>
+<img src="../enrolment/image/SEPM.png" alt="program_map" style="margin:0 200px  0 200px; width:50%;height:50%; border:2px solid black;">
+</div>
 </body>
 
 

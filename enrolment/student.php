@@ -92,7 +92,7 @@ if (isset($_POST['logout'])) {
                     <li><a href="../enrolment/home.php">Enrolment</a></li>
                     <li><a href="../enrolment/programmap.php">Program Map</a></li>
                     <li><a href="../enrolment/student.php">Profile</a></li>
-                    <li><a href="../enrolment/download.php">Download</a></li>
+					<li><a href="../enrolment/help.php">Help</a></li>
                 </ul>
 		</div>
 	</div>
@@ -103,6 +103,9 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+<div class="heading">
+    <h2 style="padding: 0 0 10px 30px">Profile</h2>
+</div>
 	<div>
 		<div class="user-img">
 			<img src="../enrolment/image/user_img.png" alt="user_pic" style="width:200px;height:200px;">
@@ -147,6 +150,14 @@ if (isset($_POST['logout'])) {
 
 		</div>
 
+		<div>
+			<table style="float:left;">
+				<tr>
+					<td><a href="update.php?s_id=<?= $student_id; ?>"><input class="save-enrol-btn" type="submit" value="Update"></a></td>
+					<td><a href="insert_db.php?st_id=<?= $student_id; ?>"><input class="save-enrol-btn" type="submit" value="Delete"></a></td>
+				</tr>
+			</table>
+		</div>
 
 
 

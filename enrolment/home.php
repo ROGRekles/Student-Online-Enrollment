@@ -46,7 +46,7 @@ if (isset($_POST['logout'])) {
                     <li><a href="../enrolment/home.php">Enrolment</a></li>
                     <li><a href="../enrolment/programmap.php">Program Map</a></li>
                     <li><a href="../enrolment/student.php">Profile</a></li>
-                    <li><a href="../enrolment/download.php">Download</a></li>
+                    <li><a href="../enrolment/help.php">Help</a></li>
                 </ul>
         </div>
     </div>
@@ -242,6 +242,10 @@ if (isset($_POST['logout'])) {
 
 
 <body>
+<div class="heading">
+    <h2 style="padding: 0 0 10px 30px">Enrolment</h2>
+</div>
+
     <table class="t1">
         <tr class="active-t1">
             <th>Semeter</th>
