@@ -24,7 +24,7 @@ if (isset($_POST['logout'])) {
         <tr>
             <td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
             <td>
-                <h2 class="header">Online Enrolment System</h2>
+                <h3 class="header">Online Enrolment System</h3>
             </td>
             <form action="#" method="POST">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

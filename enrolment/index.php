@@ -33,7 +33,7 @@ if (isset($_SESSION['login'])) {
 		<tr>
 			<td><img src="../enrolment/image/logo.jpg" alt="logo" class="logo"> </td>
 			<td>
-				<h2 class="header">Online Enrolment System</h2>
+				<h3 class="header">Online Enrolment System</h3>
 			</td>
 		</tr>
 	</table>
@@ -41,28 +41,11 @@ if (isset($_SESSION['login'])) {
 </head>
 
 <body>
-	<!-- Old version -->
-	<!-- <form action="login_check.php" method="POST">
-		
-		<div>
-			<select name="login_type">
-				<option value="admin">Admin</option>
-				<option value="student">Student</option>
-			</select>
-			<div class="flex">
-				<div><input type="text" name="username" placeholder="ID" required></div>
-				<div><input type="password" name="password" placeholder="password" required></div>
-			</div>
-			<input type="submit" name="login" value="Login">
-		</div>
-	</form> -->
 
-
-	<!-- new version -->
 	<div class="container">
 
 		<form action="login_check.php" method="POST">
-			<h2>Welcome to OES</h2>
+			<h3>Welcome to OES</h3>
 
 			<select name="login_type" style="float:right;">
 				<option value="admin">Admin</option>
