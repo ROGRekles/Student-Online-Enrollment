@@ -19,13 +19,12 @@ if (isset($_POST['logout'])) {
 
         <link href="../enrolment/css/main.css" rel="stylesheet" />
     
-        <title>OES Program map</title>
-    
+        <title>OES download</title>
         <table>
 		<tr>
 			<td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
 			<td>
-				<h3 class="header">Online Enrolment System</h3>
+				<h2 class="header">Online Enrolment System</h2>
 			</td>
     		<form action="#" method="POST">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -41,11 +40,11 @@ if (isset($_POST['logout'])) {
     
         <div class="nagivate-bar">
             <div class="menu-bar">
-            <ul>
+                <ul>
                     <li><a href="../enrolment/home.php">Enrolment</a></li>
                     <li><a href="../enrolment/programmap.php">Program Map</a></li>
                     <li><a href="../enrolment/student.php">Profile</a></li>
-                    <li><a href="../enrolment/help.php">Help</a></li>
+                    <li><a href="../enrolment/download.php">Download</a></li>
                 </ul>
             </div>
         </div>
@@ -56,8 +55,8 @@ if (isset($_POST['logout'])) {
 
 
 
+<h2>Download</h2>
 
-<h2>Program Map</h2>
 
 
 </body>

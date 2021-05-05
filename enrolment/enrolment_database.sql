@@ -10,7 +10,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `student` (
-  `student_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL AUTO_INCREMENT,
   `rmit_student_id` varchar(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -21,7 +21,8 @@ CREATE TABLE `student` (
   `gpa` varchar(10) NOT NULL,
   `photo` varchar(100) NOT NULL,
   `campus` varchar(100) NOT NULL,
-  `major` varchar(50) NOT NULL DEFAULT 'Bsc. IT'
+  `major` varchar(50) NOT NULL DEFAULT 'Bsc. IT',
+  PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -30,10 +31,9 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`student_id`,`rmit_student_id`, `name`, `email`, `password`, `date_of_birth`, `Gender`,`credit_point`,`gpa`, `photo`, `campus`, `major`) VALUES
 (1,'S3836390', 'Hua Tien Trung', 'huatientrung01@gmail.com', 'huatientrung', '1999-07-22', 'Male','148','2.9' ,'avatar.jpg', 'Viet Nam - South Saigon', 'Information Technology');
+
 INSERT INTO `student` (`student_id`,`rmit_student_id`, `name`, `email`, `password`, `date_of_birth`, `Gender`,`credit_point`,`gpa`, `photo`, `campus`, `major`) VALUES
-(2,'s3821179', 'Han sang yeob', 'ttonytony774@gmail.com', 'tonytony774', '1990-06-10', 'Male','100','5.0' ,"user_img.png", 'Viet Nam - South Saigon', 'Information Technology');
-
-
+(2,'S3836391', 'Hua Tien Chanh', 'huatienchanh01@gmail.com', 'huatienchanh', '1994-03-05', 'Male','168','3.2' ,'avatar.jpg', 'Viet Nam - South Saigon', 'Information Technology');
 -- --------------------------------------------------------
 
 --
@@ -41,7 +41,7 @@ INSERT INTO `student` (`student_id`,`rmit_student_id`, `name`, `email`, `passwor
 --
 
 CREATE TABLE `course` (
-  `course_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL AUTO_INCREMENT,
   `rmit_course_id` varchar(11) NOT NULL,
   `title` varchar(50) NOT NULL,
   `max_capacity` int(11) NOT NULL,
@@ -51,15 +51,15 @@ CREATE TABLE `course` (
   `lecturer` varchar(255) NOT NULL,
   `first_semester` varchar(20) NOT NULL,
   `second_semester` varchar(20) NOT NULL,
-  `third_semester` varchar(20) NOT NULL
+  `third_semester` varchar(20) NOT NULL,
+  PRIMARY KEY (`course_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `course`
 --
 
---
- INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
+INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
   VALUES(1, 'COSC0001', 'Introduction to Information Technology', 100, 'Basic course for student to learn various thing about IT', 'None', 'None','John Smith','Available','Available' ,'Not Available');
 
  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
@@ -101,31 +101,19 @@ CREATE TABLE `course` (
  INSERT INTO `course` (`course_id`, `rmit_course_id`, `title`, `max_capacity`, `description`, `requirement`, `unlocked_course`, `lecturer`, `first_semester`, `second_semester`,`third_semester`)
   VALUES(14, 'COSC0014', 'Programing Project 2', 100, 'This course will outline 10 development projects to help you build and add to your portfolio as a junior developer. You may also be interested in our previous blog post on How to Move From Junior to Senior Web Developer.','Programming 1','Data Science: Advance','Rose','Available','Not Available' ,'Available');
 
+--
+-- Table structure for table `enrolment`
+--
 
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`student_id`);
-
---
--- Indexes for table `course`
---
-ALTER TABLE `course`
-  ADD PRIMARY KEY (`course_id`);
+CREATE TABLE `enrolment` (
+  `enrolment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `enrolment_status` varchar(50) NOT NULL,
+  PRIMARY KEY (`enrolment_id`),
+  FOREIGN KEY (`student_id`) REFERENCES student(`student_id`),
+  FOREIGN KEY (`course_id`) REFERENCES course(`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-
-
---
--- AUTO_INCREMENT for table `student`
---
-ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `course`
---
-ALTER TABLE `course`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;

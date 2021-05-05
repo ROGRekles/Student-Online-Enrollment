@@ -26,7 +26,7 @@ if (isset($_POST['logout'])) {
 		<tr>
 			<td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
 			<td>
-				<h3 class="header">Online Enrolment System</h3>
+            <h3 class="header">Online Enrolment System</h3>
 			</td>
     		<form action="#" method="POST">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -242,13 +242,21 @@ if (isset($_POST['logout'])) {
 
 
 <body>
-<div class="heading">
-    <h2 style="padding: 0 0 10px 30px">Enrolment</h2>
-</div>
+<?php 
+
+$student_id = $_SESSION['student_id'];
+
+
+?>
+
+
+
+<form action="insert_db.php" method="POST">
 
     <table class="t1">
+    
         <tr class="active-t1">
-            <th>Semeter</th>
+            <th>Course N</th>
             <th>Course Code</th>
             <th style="width:30%">Course Title</th>
             <th>Course Detail</th>
@@ -256,153 +264,79 @@ if (isset($_POST['logout'])) {
             <th>Feb Semester</th>
             <th>Jun Semester</th>
             <th>Oct Semester</th>
+            <th>Withdrawn</th>
         </tr>
 
-        <tr>
-            <td>1</td>
-            <td>COS0001</td>
-            <td>Introduction to Information Technology</td>
-            <td><button id="myBtn">Detail</button>
+        <?php
+
+        $sql = "SELECT * FROM course ORDER BY course_id";
+        $result = mysqli_query($connectivity, $sql);
+
+        while($row = $result->fetch_assoc()) : 
+            $course1_id = $row['course_id'];
+            $first1_semester = $row['first_semester'];
+            $second1_semester = $row['second_semester'];
+            $third1_semester = $row['third_semester'];
+            ?>
+        <?php    echo "<tr><td>"
+            . $row["course_id"]
+            . "</td><td> ". $row["rmit_course_id"]
+            . "</td><td> " . $row["title"] 
+            . "</td><td><button type='button' id='myBtn'>Detail</button></td><td>" ; ?> 
+            <?php 
+            $sql = "SELECT * FROM enrolment WHERE student_id='$student_id' AND course_id='$course1_id' ";
+            $resultInner1 = mysqli_query($connectivity, $sql);
+
+            while ($row = mysqli_fetch_assoc($resultInner1)) {
+                $enrolment_status = $row['enrolment_status'];
+            }
+            if ($enrolment_status != ''){
+                echo "In progress";
+
+            }
+            ?>
             </td>
-            <td>Done</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>COS0002</td>
-            <td>Introduction to programming </td>
-            <td></td>
-            <td>Done</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>COS0003</td>
-            <td>Practical Database Concepts</td>
-            <td></td>
-            <td>Done</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>COS0004</td>
-            <td>Intro to Computer Systems and Platform</td>
-            <td></td>
-            <td>Done</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>COS0005</td>
-            <td>User Centred Design</td>
-            <td></td>
-            <td>Done</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>COS0006</td>
-            <td>Security in Computing and Information Technology</td>
-            <td></td>
-            <td>In progress</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>COS0007</td>
-            <td>Introduction to security in computing</td>
-            <td></td>
-            <td>In progress</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>COS0008</td>
-            <td>Building IT system</td>
-            <td></td>
-            <td>In progress</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>COS0009</td>
-            <td>Web programming </td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>COS0010</td>
-            <td>Software Engineering Fundamentals for IT</td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>COS0011</td>
-            <td>Professional Computing practice</td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>COS0012</td>
-            <td>Software Engineering Project Mnagement</td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>COS0013</td>
-            <td>Programing Project1</td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>COS0014</td>
-            <td>Programing Project2</td>
-            <td></td>
-            <td></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        </tr>
+            <td><input <?php
+            
+            if ($enrolment_status != '' || $first1_semester == "Not Available") {
+              echo 'style="visibility: hidden;"';
+            }
+            ?>  type="checkbox" name ="t_id" value = "<?php echo $course1_id ?>">
+            </td>
+            <td><input <?php
+            
+            if ($enrolment_status != ''|| $second1_semester == "Not Available") {
+              echo 'style="visibility: hidden;"';
+            }
+            ?>  type="checkbox" name ="t_id" value = "<?php echo $course1_id ?>">
+            </td>
+            <td><input <?php
+            
+            if ($enrolment_status != ''|| $third1_semester == "Not Available") {
+              echo 'style="visibility: hidden;"';
+            }
+            ?>  type="checkbox" name ="t_id" value = "<?php echo $course1_id ?>">
+            </td>
+            <td><input <?php
+            
+            if ($enrolment_status == '') {
+              echo 'style="visibility: hidden;"';
+            }
+            ?>  type="checkbox" name ="t_remove_id" value = "<?php echo $course1_id ?>">
+            </td>
+            
+            <?php $enrolment_status = '' ?>
+        
+        <?php endwhile; ?>
+
+
+      
+        
     </table>
-
-    <input class="save-btn" type="submit" value="Save">
-
+    <input type="hidden" name="s_id" value=<?=$student_id?>>
+    <input type="hidden" name="enrolment_status" value="In Progress">>
+    <a href="insert_db.php"><input class="save-btn" type="submit" value="Save"></a>
+    </form>
 </body>
 
 

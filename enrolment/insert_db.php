@@ -3,6 +3,7 @@
 	require('connection_db.php');
 
 	$Account_C = $_POST['c_type'];
+	
 
 	if ($Account_C == 'student') {
 		$ID=mysqli_real_escape_string($connectivity,$_POST['rmit_student_id']);
@@ -49,7 +50,41 @@
 				}
 			}
 	}
+
+	elseif (isset($_POST['s_id']) && isset($_POST['t_remove_id'])){
+		echo "haha";
+		$student_id=$_POST['s_id'];
+		$course_id=$_POST['t_remove_id'];
+
+		$sql="DELETE FROM enrolment WHERE student_id=$student_id AND course_id=$course_id  ";
+			if(mysqli_query($connectivity,$sql)){
+				header('location:home.php');
+			}
+			else{
+				mysqli_error($connectivity);
+			}
+	}
+	elseif (isset($_POST['s_id']) && isset($_POST['t_id'])){
+		$Student_id=mysqli_real_escape_string($connectivity,$_POST['s_id']);
+		$Enrolment_status="In Progress";
+		$Course_id=mysqli_real_escape_string($connectivity,$_POST['t_id']);
+		$Database="INSERT INTO enrolment(student_id,course_id,enrolment_status)VALUES('$Student_id','$Course_id','$Enrolment_status')";
+
+				if(mysqli_query($connectivity,$Database))
+				{
+					echo "hahah3";
+					$_SESSION['message']=" Course is successfully enrolled.";
+					echo "hahaha4";
+					header("Location:home.php");
+				}
+				else{
+					mysqli_error($connectivity);
+				}
+				echo "hahaha2";
+
+	}
 	elseif (isset($_POST['s_id'])) {
+		echo "hihihi";
 
 		$id=$_POST['rmit_student_id'];
 		$name=$_POST['name'];
@@ -96,6 +131,8 @@
 				}
 			
 	}
+
+
 	elseif (isset($_GET['s_id'])) {
 		$student_id=$_GET['s_id'];
 
@@ -142,9 +179,4 @@
 				mysqli_error($connectivity);
 			}
 	}
-	else
-	{
-		echo mysqli_error($connectivity);
-	}
-	//echo $Account_C;
 ?>

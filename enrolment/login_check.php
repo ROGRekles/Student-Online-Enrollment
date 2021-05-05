@@ -45,7 +45,7 @@
 					$_SESSION['pass']=$password;
 					$_SESSION['student_id']=$student_id;
 				
-					header('Location:student.php');
+					header('Location:home.php');
 					exit();
 			}
 	}
