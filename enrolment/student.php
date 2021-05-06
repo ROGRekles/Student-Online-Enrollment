@@ -88,7 +88,7 @@ if (isset($_POST['logout'])) {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="submit" name="logout" value="Log out" class="logout-btn"  style = "background-color:#F5F5F5;">
                     </form>
-                    <p style=" font-size:small; padding:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ?></p>
+                    <p style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ." ". "  "."|"?></p>
             </div>
 		</tr>
 	</table>
