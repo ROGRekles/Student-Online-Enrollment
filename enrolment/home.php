@@ -22,35 +22,49 @@ if (isset($_POST['logout'])) {
 
     <title>OES Home</title>
 
-	<table>
-		<tr>
-			<td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
-			<td>
-            <h3 class="header">Online Enrolment System</h3>
-			</td>
-    		<form action="#" method="POST">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="logout" value="Log out" class="logout-btn">
-			</form>
-			
-            <b style=" padding:10px; float:right;"><?php echo "Welcome, " . $user ?></b>
-		</tr>
-	</table>
-    <hr>
+    <div>
+        
+        <table>
+            
+            <tr>
+                <td>
+                    <a href="../enrolment/home.php" style="cursor:pointer;">
+                        <img src="image/logo.jpg" alt="logo" class="logo"> 
+                    </a>    
+                </td>
+                <td>
+                    <a href="../enrolment/home.php" style="cursor:pointer;text-decoration: none;">
+                        <h3 class="header">Online Enrolment System</h3>
+                    </a>
+                </td>
 
-    <div class="nagivate-bar">
-        <div class="menu-bar">
-        <ul>
-                    <li><a href="../enrolment/home.php">Enrolment</a></li>
-                    <li><a href="../enrolment/programmap.php">Program Map</a></li>
-                    <li><a href="../enrolment/student.php">Profile</a></li>
-                    <li><a href="../enrolment/help.php">Help</a></li>
-                </ul>
+                <div style = "background-color:#f5f5f5; height:35px;">
+                    <form action="#" method="POST" >
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" name="logout" value="Log out" class="logout-btn"  style = "background-color:#F5F5F5;">
+                    </form>
+                    <p style=" font-size:small; padding:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ?></p>
+                </div>
+            </tr>
+        </table>
+
+        <hr>
+
+
+        <div class="nagivate-bar">
+            <div class="menu-bar">
+            <ul>
+                        <li><a href="../enrolment/home.php">Enrolment</a></li>
+                        <li><a href="../enrolment/programmap.php">Program map</a></li>
+                        <li><a href="../enrolment/student.php">Profile</a></li>
+                        <li><a href="../enrolment/help.php">Help</a></li>
+                    </ul>
+            </div>
         </div>
-    </div>
 
+    </div>
     <style>
         .modal {
             display: none;
@@ -256,14 +270,14 @@ $student_id = $_SESSION['student_id'];
     <table class="t1">
     
         <tr class="active-t1">
-            <th>Course N</th>
-            <th>Course Code</th>
+            <th>No.</th>
+            <th>Course code</th>
             <th style="width:30%">Course Title</th>
-            <th>Course Detail</th>
-            <th>Course Status</th>
-            <th>Feb Semester</th>
-            <th>Jun Semester</th>
-            <th>Oct Semester</th>
+            <th>Course detail</th>
+            <th>Course status</th>
+            <th>Feb semester</th>
+            <th>Jun semester</th>
+            <th>Oct semester</th>
             <th>Withdrawn</th>
         </tr>
 
@@ -334,7 +348,7 @@ $student_id = $_SESSION['student_id'];
         
     </table>
     <input type="hidden" name="s_id" value=<?=$student_id?>>
-    <input type="hidden" name="enrolment_status" value="In Progress">>
+    <input type="hidden" name="enrolment_status" value="In Progress">
     <a href="insert_db.php"><input class="save-btn" type="submit" value="Save"></a>
     </form>
 </body>

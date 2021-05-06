@@ -22,74 +22,29 @@ if (isset($_POST['logout'])) {
     <title>OES help</title>
     <table>
         <tr>
-            <td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
             <td>
-                <h3 class="header">Online Enrolment System</h3>
+            <td>
+                <a href="../enrolment/home.php" style="cursor:pointer;">
+                    <img src="image/logo.jpg" alt="logo" class="logo"> 
+                </a>     
             </td>
-            <form action="#" method="POST">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" name="logout" value="Log out" class="logout-btn">
-            </form>
+        	<td>
+                <a href="../enrolment/home.php" style="cursor:pointer;text-decoration: none;">
+                    <h3 class="header">Online Enrolment System</h3>
+                </a>
+            </td>
 
-            <b style=" padding:10px; float:right;"><?php echo "Welcome, " . $user ?></b>
+            <div style = "background-color:#f5f5f5; height:35px;">
+                    <form action="#" method="POST" >
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" name="logout" value="Log out" class="logout-btn"  style = "background-color:#F5F5F5;">
+                    </form>
+                    <p style=" font-size:small; padding:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ?></p>
+            </div>
         </tr>
     </table>
-    <!-- <style>
-        .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('searchicon.png');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {outline: 3px solid #ddd;}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-    </style> -->
-
 
     <hr>
 
@@ -97,7 +52,7 @@ if (isset($_POST['logout'])) {
         <div class="menu-bar">
             <ul>
                 <li><a href="../enrolment/home.php">Enrolment</a></li>
-                <li><a href="../enrolment/programmap.php">Program Map</a></li>
+                <li><a href="../enrolment/programmap.php">Program map</a></li>
                 <li><a href="../enrolment/student.php">Profile</a></li>
                 <li><a href="../enrolment/help.php">Help</a></li>
             </ul>
@@ -110,43 +65,7 @@ if (isset($_POST['logout'])) {
 <div class="heading">
     <h2 style="padding: 0 0 10px 30px">Help Centre</h2>
 </div>
-<!-- <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#about">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
-  </div>
-</div> -->
-<!-- 
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-</script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
@@ -160,10 +79,38 @@ function filterFunction() {
     });
 </script>
 
+<style>
+
+input[type=text] {
+  width: 190px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 40%;
+}
+
+p {
+  margin: 0;
+  text-indent: 3ch;
+}
+
+p.pilcrow {
+   text-indent: 0;
+   display: inline;
+}
+p.pilcrow + p.pilcrow::before {
+  content: " ¶ ";
+}
+
+</style>
+
 </head>
 <body>
 
-<input id="myInput" type="text" placeholder="Type whay you want to know" style="width: 200px;">
+<input id="myInput" type="text" placeholder=" Type what you want to know.." style ="height:30px; margin:20px;">
 
 
 <br>
@@ -171,8 +118,8 @@ function filterFunction() {
 <hr>
 
 <!-- course -->
-<div id ="course">
-    <h3 style="color: red;">Course selection</h3>
+<div id ="course" style="margin:20px;">
+    <h3 style="color: red; font-style: italic;">Course selection</h3>
 
     <br>
 <!-- Q1 -->
@@ -182,7 +129,9 @@ function filterFunction() {
         <h4>Answer:</h4>
         <p>
             Yes, you should. Your program has been structured so that later courses build on earlier courses and with an understanding that you will develop certain skills and capabilities along the way. You are strongly recommended to follow your program map as closely as you can.
-            To see the recommended order in which you should take your courses, go to the Course Enrolment page and sort the course list by the default semester column. You can also look at the Program Map using the program map tab.
+        </p>
+        <p>
+        To see the recommended order in which you should take your courses, go to the Course Enrolment page and sort the course list by the default semester column. You can also look at the Program Map using the program map tab.
             For queries about program and course enrolment, contact RMIT Connect on campus or via https://rmit.service-now.com/connect_vn.
         </p>
     </div>
@@ -198,6 +147,8 @@ function filterFunction() {
         <p>
         A pre-requisite is a course which you must complete before being permitted to take another course. For example, if COSC2081 is a pre-requisite for COSC2082, you must complete COSC2081 before you take COSC2082.
         Co-requisites are courses which you must take in the same semester. For example, LSC Work Integrated Learning 1 & 2 are co-requisites.
+        </p>
+        <p>
         You can find out the pre-requisites and co-requisites for each course by hovering over the course title on the Course Enrolment page. Your program map will also show pre-requisites for core courses in your program. Pre-requisites are also listed in course guides.
         </p>
     </div>
@@ -214,6 +165,8 @@ function filterFunction() {
         <p>
         Generally, you need to take a minimum of 12 credit points (at least one course) per semester, and you can take a maximum of 48 credit points per semester.
         OES shows how many credit points you are enrolled in at the top of the Feb, Jun, and Oct Semester columns.
+        </p>
+        <p>
         Many standard courses are worth 12 credit points. Therefore, in many cases, the maximum course load is four courses per semester. However, there are courses (for example internship courses and project courses) that are worth more than 12 credit points. If you enrol in those courses, your maximum study load (48 credit points) for that semester will be less than four courses. Check the course descriptions to find out how many credit points each course is worth.
         </p>
     </div>
@@ -227,8 +180,8 @@ function filterFunction() {
 <hr>
 
 <!-- elective -->
-<div id ="course">
-    <h3 style="color: red;">Electives</h3>
+<div id ="course" style="margin:20px;">
+    <h3 style="color: red;font-style: italic;">Electives</h3>
 
     <br>
 <!-- Q4 -->
@@ -280,8 +233,8 @@ function filterFunction() {
 <hr>
 
 <!-- Deadlines,fees and penalties -->
-<div id ="course">
-    <h3 style="color: red;">Deadlines,fees and penalties</h3>
+<div id ="course" style="margin:20px;">
+    <h3 style="color: red;font-style: italic;">Deadlines,fees and penalties</h3>
 
     <br>
 <!-- Q7 -->
@@ -326,16 +279,16 @@ function filterFunction() {
     <hr>
     <br>
 
-        <!-- Q9 -->
-        <div id="about">
+    <!-- Q10 -->
+    <div id="about">
 
-            <h4>What happens if I do not enrol?</h4>
-            <h4>Answer:</h4>
-            <p>
+        <h4>What happens if I do not enrol?</h4>
+        <h4>Answer:</h4>
+        <p>
             If you do not enrol by the published deadlines, you will not be able to add courses and will need to take Leave of Absence (LOA).
             In addition, if you are not enrolled or on a Leave of Absence by the Census Date (Friday of week 4) in any semester, your enrolment in your program may be cancelled.
-            </p>
-        </div>
+        </p>
+    </div>
 
         <br>
         <hr>

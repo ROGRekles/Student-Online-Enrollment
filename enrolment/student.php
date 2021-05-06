@@ -70,18 +70,26 @@ if (isset($_POST['logout'])) {
 
 	<table>
 		<tr>
-			<td><img src="image/logo.jpg" alt="logo" class="logo"> </td>
 			<td>
-				<h3 class="header">Online Enrolment System</h3>
-			</td>
-    		<form action="#" method="POST">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="logout" value="Log out" class="logout-btn">
-			</form>
-			
-            <b style=" padding:10px; float:right;"><?php echo "Welcome, " . $user ?></b>
+                <a href="../enrolment/home.php" style="cursor:pointer;">
+                    <img src="image/logo.jpg" alt="logo" class="logo"> 
+                </a>    
+            </td>
+        	<td>
+                <a href="../enrolment/home.php" style="cursor:pointer;text-decoration: none;">
+                    <h3 class="header">Online Enrolment System</h3>
+                </a>
+            </td>
+
+			<div style = "background-color:#f5f5f5; height:35px;">
+                    <form action="#" method="POST" >
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" name="logout" value="Log out" class="logout-btn"  style = "background-color:#F5F5F5;">
+                    </form>
+                    <p style=" font-size:small; padding:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ?></p>
+            </div>
 		</tr>
 	</table>
 	<hr>
@@ -90,7 +98,7 @@ if (isset($_POST['logout'])) {
 		<div class="menu-bar">
 		<ul>
                     <li><a href="../enrolment/home.php">Enrolment</a></li>
-                    <li><a href="../enrolment/programmap.php">Program Map</a></li>
+                    <li><a href="../enrolment/programmap.php">Program map</a></li>
                     <li><a href="../enrolment/student.php">Profile</a></li>
                     <li><a href="../enrolment/help.php">Help</a></li>
                 </ul>
