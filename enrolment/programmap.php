@@ -66,7 +66,7 @@ if (isset($_POST['logout'])) {
             cursor: pointer;
             font-size: 15px;
             float: right;
-            margin: 10px 250px 10px 50px;
+            margin: 50px 10px 10px 10px;
             text-decoration: none;
         }
 
@@ -84,20 +84,23 @@ if (isset($_POST['logout'])) {
 
 <body>
 
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="map_container">
+        
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Auto width -->
-    <div style="margin-left: 10%; margin-right:10%;">
+        <!-- Auto width -->
+        <div style="margin-left: 10%; margin-right:10%;">
 
-        <div>
-            <img src="../enrolment/image/SEPM (5).png" alt="program_map" style=" width:75%; height:50%; ">
+            <div>
+                <img src="../enrolment/image/SEPM (5).png" alt="program_map" style=" width:75%; height:50%; ">
+            </div>
+
+            <div>
+                <button class="btn"><a href="../enrolment/image/SEPM (5).png" download> <i class="fa fa-download"> Download</i></a></button>
+            </div>
+
         </div>
-
-        <div>
-            <button class="btn"><a href="../enrolment/image/SEPM (5).png" download> <i class="fa fa-download"> Download</i></a></button>
-        </div>
-
     </div>
 </body>
 
