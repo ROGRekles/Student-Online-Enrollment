@@ -8,6 +8,8 @@
 body {
     background-color: white;
     font-family: serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo{
@@ -24,7 +26,6 @@ body {
 .nagivate-bar{
     top: 0;
     margin-bottom: 5px;
-    /* border-bottom: 1.5px solid rgb(68, 68, 68); */
     z-index: 2;
 }
 
@@ -32,18 +33,19 @@ body {
 
 .menu-bar ul{
     display: inline-flex;
-    margin-left: 35%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .menu-bar ul li{
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 10px 25px 30px 30px ;
     text-align: center;
     cursor: pointer;
 }
   
 .menu-bar ul li a{
-    font-size: 18px;
+    font-size: 19px;
     color: black;
     cursor: pointer;
     text-decoration: none;  
@@ -51,17 +53,19 @@ body {
 
 .menu-bar ul li a:hover {
     text-decoration: underline #009879;
+    /* #009879 */
 }
 
 
 .menu-bar ul li a:active {
-    font-weight: bold;
+    /* font-weight: bold; */
+    text-decoration: underline  rgb(250, 60, 60);
 }
 
 hr{
     display:flex;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
     border-width: 1px;
 }
 
@@ -73,7 +77,6 @@ h2{
     margin: auto;
     width: 400px;
     max-width: 90%;
- 
 }
 
 .container form {
@@ -123,10 +126,12 @@ h2{
     justify-content: center;
     align-items: center;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-left: 5%;
+    margin-right: 5%;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
+
 }
 
 .active-t1 th{
@@ -152,12 +157,14 @@ h2{
     height: 34px;
     border: none;
     outline: none;
-    background: red;
+    background: rgb(250, 60, 60);
     font-size: 15px;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
+    font-style: italic;
+    margin: 30px;
 }
 
 
@@ -212,6 +219,15 @@ h2{
     cursor: pointer;
     color: black;
     background-color:#F5F5F5;
+}
+
+.heading{
+
+    padding: 10px 10px 10px 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    
 }
 
 /* course detail btn*/

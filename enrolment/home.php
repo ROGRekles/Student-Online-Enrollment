@@ -25,7 +25,7 @@ if (isset($_POST['logout'])) {
     <div>
         
         <table>
-            
+
             <tr>
                 <td>
                     <a href="../enrolment/home.php" style="cursor:pointer;">
@@ -66,6 +66,7 @@ if (isset($_POST['logout'])) {
 
     </div>
     <style>
+
         .modal {
             display: none;
             /* Hidden by default */
