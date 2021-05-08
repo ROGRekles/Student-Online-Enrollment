@@ -7,7 +7,7 @@
 
 body {
     background-color: white;
-    font-family: serif;
+    font-family: "Open Sans";
     margin-left: auto;
     margin-right: auto;
 }
@@ -39,13 +39,15 @@ body {
 
 .menu-bar ul li{
     list-style-type: none;
-    padding: 10px 25px 30px 30px ;
+    padding: 10px 30px 30px 30px ;
+    margin: auto;
     text-align: center;
     cursor: pointer;
+    font-weight: 700;
 }
   
 .menu-bar ul li a{
-    font-size: 19px;
+    font-size: 16px;
     color: black;
     cursor: pointer;
     text-decoration: none;  
@@ -53,12 +55,11 @@ body {
 
 .menu-bar ul li a:hover {
     text-decoration: underline #009879;
-    /* #009879 */
 }
 
 
 .menu-bar ul li a:active {
-    /* font-weight: bold; */
+
     text-decoration: underline  rgb(250, 60, 60);
 }
 
@@ -122,7 +123,7 @@ h2{
     height: 34px;
     border: none;
     outline: none;
-    background: red;
+    background:  rgb(250, 60, 60);
     cursor: pointer;
     font-size: 16px;
     font-style: italic;
@@ -233,13 +234,12 @@ h2{
 }
 
 .heading{
-
     padding: 10px 10px 10px 30px;
     background: white;
     border-radius: 4px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
-    
 }
+
 
 
 /* course detail btn*/
@@ -250,6 +250,5 @@ h2{
 .footer{
     margin-top: 10%;
     background-color: lightgray;
-    padding:3%;
-    
+    padding:2%;   
 }

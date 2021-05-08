@@ -27,7 +27,8 @@ if (isset($_SESSION['login'])) {
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 	<link href="../enrolment/css/main.css" rel="stylesheet" />
-
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	
 	<title>OES Login Form</title>
 	<table>
 		<tr>
@@ -54,7 +55,7 @@ if (isset($_SESSION['login'])) {
 
 			<div class="flex">
 				<input type="text" class="form-control" placeholder="ID" name="username"  required>
-				<input type="password" class="form-control" placeholder="password" name="password"  required>
+				<input type="password" class="form-control" placeholder="Password" name="password"  required>
 			</div>
 
 			<input type="submit" class="btn" name="login" value="Login">

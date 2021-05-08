@@ -26,6 +26,7 @@ if (isset($_POST['logout'])) {
 	<!-- css -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 	<link href="../enrolment/css/main.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
 
 	<title>OES Admin page </title>
