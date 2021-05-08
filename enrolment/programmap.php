@@ -60,14 +60,13 @@ if (isset($_POST['logout'])) {
 
     <style>
         .btn {
-
             background-color: #009879;
             border: none;
             padding: 6px 15px;
             cursor: pointer;
             font-size: 15px;
             float: right;
-            margin: 10px 100px 10px 50px;
+            margin: 10px 250px 10px 50px;
             text-decoration: none;
         }
 
@@ -92,12 +91,13 @@ if (isset($_POST['logout'])) {
     <div style="margin-left: 10%; margin-right:10%;">
 
         <div>
-            <button class="btn"><a href="../enrolment/image/SEPM (5).png" download> <i class="fa fa-download"> Download</i></a></button>
+            <img src="../enrolment/image/SEPM (5).png" alt="program_map" style=" width:75%; height:50%; ">
         </div>
 
         <div>
-            <img src="../enrolment/image/SEPM (5).png" alt="program_map" style="margin:0 250px  0 250px; width:55%; height:55%; border:1px solid black;">
+            <button class="btn"><a href="../enrolment/image/SEPM (5).png" download> <i class="fa fa-download"> Download</i></a></button>
         </div>
+
     </div>
 </body>
 

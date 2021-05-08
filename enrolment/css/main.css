@@ -64,8 +64,8 @@ body {
 
 hr{
     display:flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     border-width: 1px;
 }
 
@@ -145,6 +145,11 @@ h2{
     height:40px;
 }
 
+.t1 tr td:hover{
+    color:gray;
+    cursor:pointer;
+}
+
 
 
 .save-btn{
@@ -163,7 +168,6 @@ h2{
     color: white;
     cursor: pointer;
     font-weight: 500;
-    font-style: italic;
     margin: 30px;
 }
 
@@ -197,7 +201,6 @@ h2{
 .save-enrol-btn{
     margin-left: 50%;
     margin-top : 3%;
-    /* transform: translateX(-50%); */
     width: 100px;
     height: 34px;
     border: none;
@@ -213,8 +216,6 @@ h2{
 .logout-btn{
     margin: 10px;
     float: right;
-    /* height: 20px;
-    width: 70px; */
     border: none;
     cursor: pointer;
     color: black;
@@ -229,6 +230,7 @@ h2{
     box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
     
 }
+
 
 /* course detail btn*/
 

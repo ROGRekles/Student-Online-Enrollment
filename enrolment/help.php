@@ -126,7 +126,7 @@ if (isset($_POST['logout'])) {
 
             <!-- course -->
             <div id="course" style="margin:20px;">
-                <h3 style="color: red; font-style: italic;">Course selection</h3>
+                <h3 style="color: rgb(250, 60, 60); font-style: italic;">Course selection</h3>
 
                 <br>
                 <!-- Q1 -->
@@ -188,7 +188,7 @@ if (isset($_POST['logout'])) {
 
             <!-- elective -->
             <div id="course" style="margin:20px;">
-                <h3 style="color: red;font-style: italic;">Electives</h3>
+                <h3 style="color: rgb(250, 60, 60);font-style: italic;">Electives</h3>
 
                 <br>
                 <!-- Q4 -->
@@ -241,7 +241,7 @@ if (isset($_POST['logout'])) {
 
             <!-- Deadlines,fees and penalties -->
             <div id="course" style="margin:20px;">
-                <h3 style="color: red;font-style: italic;">Deadlines,fees and penalties</h3>
+                <h3 style="color: rgb(250, 60, 60);font-style: italic;">Deadlines,fees and penalties</h3>
 
                 <br>
                 <!-- Q7 -->
