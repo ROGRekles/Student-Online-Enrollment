@@ -126,28 +126,28 @@ if (isset($_POST['logout'])) {
                             if ($enrolment_status != '' || $first1_semester == "Not Available") {
                                 echo 'style="visibility: hidden;"';
                             }
-                            ?> type="checkbox" name="t_id" value="<?php echo $course1_id ?>">
+                            ?> type="checkbox" name="t1_id[]" value="<?php echo $course1_id ?>">
                 </td>
                 <td><input <?php
 
                             if ($enrolment_status != '' || $second1_semester == "Not Available") {
                                 echo 'style="visibility: hidden;"';
                             }
-                            ?> type="checkbox" name="t_id" value="<?php echo $course1_id ?>">
+                            ?> type="checkbox" name="t1_id[]" value="<?php echo $course1_id ?>">
                 </td>
                 <td><input <?php
 
                             if ($enrolment_status != '' || $third1_semester == "Not Available") {
                                 echo 'style="visibility: hidden;"';
                             }
-                            ?> type="checkbox" name="t_id" value="<?php echo $course1_id ?>">
+                            ?> type="checkbox" name="t1_id[]" value="<?php echo $course1_id ?>">
                 </td>
                 <td><input <?php
 
                             if ($enrolment_status == '') {
                                 echo 'style="visibility: hidden;"';
                             }
-                            ?> type="checkbox" name="t_remove_id" value="<?php echo $course1_id ?>">
+                            ?> type="checkbox" name="t_remove_id[]" value="<?php echo $course1_id ?>">
                 </td>
 
                 <?php $enrolment_status = '' ?>

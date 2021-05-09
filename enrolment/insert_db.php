@@ -50,38 +50,55 @@
 				}
 			}
 	}
-
-	elseif (isset($_POST['s_id']) && isset($_POST['t_remove_id'])){
-		echo "haha";
-		$student_id=$_POST['s_id'];
-		$course_id=$_POST['t_remove_id'];
-
-		$sql="DELETE FROM enrolment WHERE student_id=$student_id AND course_id=$course_id  ";
-			if(mysqli_query($connectivity,$sql)){
-				header('location:home.php');
-			}
-			else{
-				mysqli_error($connectivity);
-			}
-	}
-	elseif (isset($_POST['s_id']) && isset($_POST['t_id'])){
+	elseif (isset($_POST['s_id']) && isset($_POST['t1_id'])  && isset($_POST['t_remove_id'])){
 		$Student_id=mysqli_real_escape_string($connectivity,$_POST['s_id']);
 		$Enrolment_status="In Progress";
-		$Course_id=mysqli_real_escape_string($connectivity,$_POST['t_id']);
+		$Array_Course_id=mysqli_real_escape_string($connectivity,$_POST['t1_id']);
+		print_r($Array_Course_id);
+		foreach($_POST['t1_id'] as $Course_id){
 		$Database="INSERT INTO enrolment(student_id,course_id,enrolment_status)VALUES('$Student_id','$Course_id','$Enrolment_status')";
 
-				if(mysqli_query($connectivity,$Database))
-				{
-					echo "hahah3";
-					$_SESSION['message']=" Course is successfully enrolled.";
-					echo "hahaha4";
-					header("Location:home.php");
-				}
-				else{
-					mysqli_error($connectivity);
-				}
-				echo "hahaha2";
+				mysqli_query($connectivity,$Database);
+				
+				
 
+		}
+		foreach($_POST['t_remove_id'] as $course_id){
+		$sql="DELETE FROM enrolment WHERE student_id=$Student_id AND course_id=$course_id  ";
+		mysqli_query($connectivity,$sql);
+		}
+
+		header('location:home.php');
+
+
+	}
+
+	elseif (isset($_POST['s_id']) && isset($_POST['t_remove_id'])){
+
+		$Student_id=$_POST['s_id'];
+
+		foreach($_POST['t_remove_id'] as $course_id){
+			$sql="DELETE FROM enrolment WHERE student_id=$Student_id AND course_id=$course_id  ";
+			mysqli_query($connectivity,$sql);
+			}
+	
+			header('location:home.php');
+	}
+
+	elseif (isset($_POST['s_id']) && isset($_POST['t1_id'])){
+		$Student_id=mysqli_real_escape_string($connectivity,$_POST['s_id']);
+		$Enrolment_status="In Progress";
+		$Array_Course_id=mysqli_real_escape_string($connectivity,$_POST['t1_id']);
+		print_r($Array_Course_id);
+		foreach($_POST['t1_id'] as $Course_id){
+		$Database="INSERT INTO enrolment(student_id,course_id,enrolment_status)VALUES('$Student_id','$Course_id','$Enrolment_status')";
+
+				mysqli_query($connectivity,$Database);
+				
+				
+
+		}
+		header('location:home.php');
 	}
 	elseif (isset($_POST['s_id'])) {
 		echo "hihihi";
