@@ -1,0 +1,237 @@
+/* basic setting */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: "Open Sans";
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    height: 35px;
+    margin: 20px 10px 10px 20px;
+}
+
+.header {
+    color: black;
+    width: 100%;
+    font-weight: 500;
+}
+
+.nagivate-bar {
+    top: 0;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.menus-bar ul li {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.menus-bar ul li a {
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menus-bar ul li a:hover {
+    text-decoration: underline #009879;
+}
+
+.menus-bar ul li a:active {
+    text-decoration: underline rgb(250, 60, 60);
+}
+
+hr {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-width: 1px;
+}
+
+
+/* body */
+
+h2 {
+    padding: 100px;
+}
+
+.container {
+    margin: auto;
+    width: 400px;
+    max-width: 90%;
+}
+
+.map_container {
+    background: white;
+    border-radius: 4px;
+    border: 0.5px black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container form {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    margin-top: 30%;
+}
+
+.container form h3 {
+    text-align: center;
+    margin-bottom: 10%;
+    color: black;
+}
+
+.container form .form-control {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.container form .btn {
+    margin-left: 50%;
+    width: 120px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: rgb(250, 60, 60);
+    cursor: pointer;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+.t1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.active-t1 th {
+    width: 140px;
+    height: 30px;
+    border-bottom: 2px solid #009879;
+    font-weight: 500;
+}
+
+.t1 tr td {
+    height: 40px;
+}
+
+.t1 tr td:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.save-btn {
+    display: flex;
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: rgb(250, 60, 60);
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* profile */
+
+.user-img {
+    height: auto;
+    width: 10px;
+    text-align: center;
+}
+
+.user-info {
+    width: 40%;
+    margin-left: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.user-info tr {
+    font-weight: bold;
+}
+
+.user-info tr td {
+    height: 30px;
+    border-bottom: 1px solid lightgrey;
+    padding-left: 10px;
+}
+
+.save-enrol-btn {
+    margin-left: 50%;
+    margin-top: 3%;
+    width: 100px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+.logout-btn {
+    margin: 10px;
+    float: right;
+    border: none;
+    cursor: pointer;
+    color: black;
+    background-color: #F5F5F5;
+}
+
+.heading {
+    padding: 10px 10px 10px 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+}
+
+
+/* course detail btn*/
+
+
+/* footer */
+
+footer {
+    margin-top: 5em;
+    background-color: lightgray;
+    padding-top: 2%;
+    bottom: 0;
+}
