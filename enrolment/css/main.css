@@ -187,17 +187,16 @@ h2{
 
 /* profile */
 .user-img{
-
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .user-info{
-    width: 40%;
-    margin-left: 400px;
+    width: 50%;
+    margin-left: 100px;
+    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     text-align: left;
     border-collapse: collapse;
@@ -205,7 +204,6 @@ h2{
 
 .user-info table tr{
     padding-bottom:40px;
-
 }
 
 .user-info table tr td{
@@ -250,7 +248,36 @@ h2{
 
 
 
-/* course detail btn*/
+/* student history */
+    .user_infomation_text{
+        margin-left: 280px; 
+    }
+
+    .history_table h3{
+        margin-left: 280px; 
+        margin-top: 100px;
+    }
+
+    .history{
+        width: 60%;
+        margin-top: 30px;
+        margin-left: 250px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        border-collapse: collapse; 
+    }
+
+    .history th{
+        border-bottom:1px solid #009879;
+    }
+
+    .history td{
+        height: 30px;
+        padding: 10px;
+    }
+    .history  tbody tr:hover {
+        background: rgb(230, 253, 230);
+    }
 
 
 /* footer */
