@@ -54,13 +54,15 @@ body {
 }
 
 .menu-bar ul li a:hover {
-    text-decoration: underline #009879;
+    color: gray;
 }
 
 
 .menu-bar ul li a:active {
-
-    text-decoration: underline  rgb(250, 60, 60);
+    color:crimson;
+    
+    border-left: 50%;
+    border-right: 50%;
 }
 
 hr{
@@ -148,7 +150,6 @@ h2{
 .active-t1 th{
     width: 140px;
     height: 30px;
-
     border-bottom: 2px solid #009879;
     font-weight: 500;
 }
@@ -188,16 +189,16 @@ h2{
 /* profile */
 .user-img{
     display: flex;
-    margin-left: 200px;
+    margin-left: 230px;
     margin-bottom: 20px;
     margin-top: 30px;
+
 }
 
 .user-info{
     width: 50%;
     margin-left: 100px;
-    
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: left;
     border-collapse: collapse;
 }
