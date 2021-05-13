@@ -66,8 +66,10 @@ if (isset($_POST['logout'])) {
 
 	<link href="../enrolment/css/main.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!-- CSS only -->
 
-	<title>OES Home</title>
+	<title>OES Student Profile</title>
+
 
 	<table>
 		<tr>
@@ -89,7 +91,7 @@ if (isset($_POST['logout'])) {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="submit" name="logout" value="Log out" class="logout-btn"  style = "background-color:#F5F5F5;">
                     </form>
-                    <p style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ." ". "  "."|"?></p>
+                    <b style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user ." ". "  "."|"?></b>
             </div>
 		</tr>
 	</table>
@@ -112,9 +114,11 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+<div class="table-responsive-sm">
+	<div class="row justify-content-center">
 	<div>
 		<div class="user-img">
-			<img src="../enrolment/image/user_img.png" alt="user_pic" style="width:200px;height:200px;">
+			<img src="../enrolment/image/user_img.png" alt="user_pic" >
 		</div>
 
 		<div class="user-info">
@@ -132,7 +136,7 @@ if (isset($_POST['logout'])) {
 					<td style="font-weight: normal;"><?= $gender; ?></td>
 				</tr>
 				<tr>
-					<td>DoB :</td>
+					<td>Date of Birth :</td>
 					<td style="font-weight: normal;"><?= $dob; ?></td>
 				</tr>
 				<tr>
@@ -157,8 +161,6 @@ if (isset($_POST['logout'])) {
 		</div>
 
 
-
-
 </body>
 
 
@@ -166,7 +168,7 @@ if (isset($_POST['logout'])) {
 <footer class="footer">
 
 	<div>
-		<p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
+	<p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Ho Chi Minh City</p>
 		<p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
 	</div>
 

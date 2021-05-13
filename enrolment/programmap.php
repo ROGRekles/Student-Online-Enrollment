@@ -42,7 +42,7 @@ if (isset($_POST['logout'])) {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="submit" name="logout" value="Log out" class="logout-btn" style="background-color:#F5F5F5;">
                 </form>
-                <p style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user . " " . "  " . "|" ?></p>
+                <b style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user . " " . "  " . "|" ?></b>
             </div>
         </tr>
     </table>
@@ -85,7 +85,7 @@ if (isset($_POST['logout'])) {
 
 <body>
 
-    <div class="map_container">
+
         
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -94,11 +94,11 @@ if (isset($_POST['logout'])) {
         <div style="margin-left: 10%; margin-right:10%;">
 
             <div>
-                <img src="../enrolment/image/SEPM (5).png" alt="program_map" style=" width:75%; height:50%; ">
+                <img src="../enrolment/image/SEPM_display.png" alt="program_map" style=" width:75%; height:50%;">
             </div>
 
             <div>
-                <button class="btn"><a href="../enrolment/image/SEPM (5).png" download> <i class="fa fa-download"> Download</i></a></button>
+                <button class="btn"><a href="../enrolment/image/SEPM_download.png" download> <i class="fa fa-download"> Download</i></a></button>
             </div>
 
         </div>
@@ -110,7 +110,7 @@ if (isset($_POST['logout'])) {
 <footer class="footer">
 
     <div>
-        <p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
+    <p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Ho Chi Minh City</p>
         <p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
     </div>
 

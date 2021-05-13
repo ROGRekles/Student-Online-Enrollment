@@ -148,6 +148,7 @@ h2{
 .active-t1 th{
     width: 140px;
     height: 30px;
+
     border-bottom: 2px solid #009879;
     font-weight: 500;
 }
@@ -186,10 +187,12 @@ h2{
 
 /* profile */
 .user-img{
-    height: auto;
-    width: 10px;
-    float:left;
-    margin-left: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .user-info{
@@ -199,14 +202,18 @@ h2{
     text-align: left;
     border-collapse: collapse;
 }
+
 .user-info table tr{
-    font-weight: bold;
+    padding-bottom:40px;
+
 }
 
 .user-info table tr td{
     height:30px;
     border-bottom: 1px solid lightgrey;
     padding-left: 10px;
+    width: 500px;
+    height: 30px;
 }
 
 .save-enrol-btn{
@@ -226,6 +233,7 @@ h2{
 
 .logout-btn{
     margin: 10px;
+    font-size: small;
     float: right;
     border: none;
     cursor: pointer;

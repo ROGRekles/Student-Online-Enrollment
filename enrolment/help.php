@@ -45,7 +45,7 @@ if (isset($_POST['logout'])) {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="submit" name="logout" value="Log out" class="logout-btn" style="background-color:#F5F5F5;">
                 </form>
-                <p style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user . " " . "  " . "|" ?></p>
+                <b style=" font-size:small; padding-top:10px; float:right; background-color:#F5F5F5;"><?php echo "Welcome, " . $user . " " . "  " . "|" ?></b>
             </div>
 
             <td>
@@ -140,7 +140,7 @@ if (isset($_POST['logout'])) {
 
             <!-- course -->
             <div id="course" style="margin:20px;">
-                <h3 style="color: rgb(250, 60, 60); font-style: italic;">1. Course selection</h3>
+                <h3 style="color: rgb(250, 60, 60);">1. Course selection</h3>
 
                 <br>
                 <!-- Q1 -->
@@ -151,10 +151,7 @@ if (isset($_POST['logout'])) {
                     <h5>Answer:</h5>
                     <p>
                         Yes, you should. Your program has been structured so that later courses build on earlier courses and with an understanding that you will develop certain skills and capabilities along the way. You are strongly recommended to follow your program map as closely as you can.
-                    </p>
-                    <p>
-                        To see the recommended order in which you should take your courses, go to the Course Enrolment page and sort the course list by the default semester column. You can also look at the Program Map using the program map tab.
-                        For queries about program and course enrolment, contact RMIT Connect on campus or via https://rmit.service-now.com/connect_vn.
+                        You can look at the Program Map using the program map tab.
                     </p>
                 </div>
 
@@ -168,11 +165,12 @@ if (isset($_POST['logout'])) {
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        A pre-requisite is a course which you must complete before being permitted to take another course. For example, if COSC2081 is a pre-requisite for COSC2082, you must complete COSC2081 before you take COSC2082.
-                        Co-requisites are courses which you must take in the same semester. For example, LSC Work Integrated Learning 1 & 2 are co-requisites.
+                        A pre-requisite is a course that you must complete before being permitted to take another course. For example, if COSC0001 is a pre-requisite for COSC0002, you must complete COSC0001 before you take COSC0002. Co-requisites are courses that you must take in the same semester.
                     </p>
                     <p>
-                        You can find out the pre-requisites and co-requisites for each course by hovering over the course title on the Course Enrolment page. Your program map will also show pre-requisites for core courses in your program. Pre-requisites are also listed in course guides.
+                        For example, LSC Work Integrated Learning 1 & 2 are co-requisites.
+                        You can find out the pre-requisites and co-requisites for each course by clicking the course detail button on the Course Enrolment page. Your program map will also show pre-requisites for core courses in your program. Pre-requisites are also listed in course guides.
+
                     </p>
                 </div>
 
@@ -187,31 +185,12 @@ if (isset($_POST['logout'])) {
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Generally, you need to take a minimum of 12 credit points (at least one course) per semester, and you can take a maximum of 48 credit points per semester.
-                        OES shows how many credit points you are enrolled in at the top of the Feb, Jun, and Oct Semester columns.
+                        Generally, you need to take a minimum of 12 credit points (at least one course) per semester, and you can take a maximum of 48 credit points per semester. OES shows how many credit points you are enrolled in at the top of the Feb, Jun, and Oct Semester columns.
                     </p>
                     <p>
-                        Many standard courses are worth 12 credit points. Therefore, in many cases, the maximum course load is four courses per semester. However, there are courses (for example internship courses and project courses) that are worth more than 12 credit points. If you enrol in those courses, your maximum study load (48 credit points) for that semester will be less than four courses. Check the course descriptions to find out how many credit points each course is worth.
+                        Many standard courses are worth 12 credit points. Therefore, in many cases, the maximum course load is four courses per semester. However, there are courses (for example internship courses and project courses) that are worth more than 12 credit points. If you enroll in those courses, your maximum study load (48 credit points) for that semester will be less than four courses. Check the course descriptions to find out how many credit points each course is worth.
                     </p>
                 </div>
-
-                <br>
-
-
-            </div>
-
-            <br>
-            <br>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-
-            <!-- elective -->
-            <div id="course" style="margin:20px;">
-                <h3 style="color: rgb(250, 60, 60);font-style: italic;">2. Electives</h3>
 
                 <br>
                 <!-- Q4 -->
@@ -221,23 +200,37 @@ if (isset($_POST['logout'])) {
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Program electives are courses you take in addition to the mandatory (core) courses in your program. Program electives are generally related to discipline area of your program. Not every program has program electives.
-                        You can select program electives by clicking on [Select] or [Change] next to a Program Elective on the Course Enrolment page. The list of program electives will appear.
+                        In such a case, please contact RMIT connect to receive help from us.
+                    <p><a href="https://www.rmit.edu.vn/students/support/rmit-connect">https://www.rmit.edu.vn/students/support/rmit-connect</a></p>
                     </p>
                 </div>
 
-                <br>
-                <hr>
-                <br>
 
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+
+
+            <!-- Deadlines,fees and penalties -->
+            <div id="course" style="margin:20px;">
+                <h3 style="color: rgb(250, 60, 60);">2. Deadlines,fees and penalties</h3>
+
+                <br>
                 <!-- Q5 -->
                 <div id="about">
-                    <h4>Q. What is a general elective?</h4>
+                    <br>
+                    <h4>Q. Should I enrol as soon as possible?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        General electives are courses that you can take in addition to the mandatory courses and program electives in your program. General electives allow you to study courses aside your discipline area.
-                        You can select general electives by clicking on [Select] or [Change] next to a General Elective on the Course Enrolment page. The list of general electives will appear.
+                      Yes. By enrolling early, you have a better chance to secure a place in the courses you wish to study.
                     </p>
                 </div>
 
@@ -247,41 +240,27 @@ if (isset($_POST['logout'])) {
 
                 <!-- Q6 -->
                 <div id="about">
-
-                    <h4>Q. Can I choose any course as general elective?</h4>
+                    <h4>Q. What are the deadlines for adding and dropping courses?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Yes. You can choose any course that has been made available as a general elective. These courses will appear in the Elective Selection pop-up on the Course Enrolment page.
-                        Note that there are limited places available for electives and some electives have pre-requisites. Moreover, you may only choose electives that belong to your own career level (undergraduate or postgraduate).
+                    Generally, the deadline for adding and dropping courses to a semester without a penalty fee is Friday of week 2 of that semester. 
+                    After this date, you can still drop courses until Friday of week 8, but significant penalty fees apply. 
                     </p>
                 </div>
 
                 <br>
-
-
-            </div>
-            <br>
-            <br>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-            <!-- Deadlines,fees and penalties -->
-            <div id="course" style="margin:20px;">
-                <h3 style="color: rgb(250, 60, 60);font-style: italic;">3. Deadlines,fees and penalties</h3>
-
+                <hr>
                 <br>
+
                 <!-- Q7 -->
                 <div id="about">
-                    <br>
-                    <h4>Q. Should I enrol as soon as possible?</h4>
+
+                    <h4>Q. Are late fees or penalties applicable if I enrol late?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Yes. By enrolling early, you have a better chance to secure a place in the courses you wish to study.
+                    Please refer to the Student Fees and Charges Guide in section 6.8, available at <a href="https://www.rmit.edu.vn/study-at-rmit/tuition-fees">https://www.rmit.edu.vn/study-at-rmit/tuition-fees</a>. You can find at the bottom of the webpage.
                     </p>
                 </div>
 
@@ -291,14 +270,27 @@ if (isset($_POST['logout'])) {
 
                 <!-- Q8 -->
                 <div id="about">
-                    <h4>Q. What are the deadlines for adding and dropping courses?</h4>
+
+                    <h4>Q. What happens if I do not enrol?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Generally, the deadline for adding and dropping courses to a semester without penalty fee is Friday of week 2 of that semester. After this date, you can still drop courses until Friday of week 8, but significant penalty fees apply.
-                        Refer to the Timeline tab on OES to see all deadlines, or refer to the Academic Calendar, available at https://www.rmit.edu.vn/students/my-studies/important-dates-and-academic-calendar.
+                    If you do not enroll by the published deadlines, you will not be able to add courses and will need to take Leave of Absence (LOA). In addition, if you are not enrolled or on a Leave of Absence by the Census Date (Friday of week 4) in any semester, your enrolment in your program may be canceled.
                     </p>
                 </div>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+
+            <!-- Personal Information -->
+            <div id="course" style="margin:20px;">
+                <h3 style="color: rgb(250, 60, 60);">3. Personal Information</h3>
 
                 <br>
                 <hr>
@@ -306,12 +298,11 @@ if (isset($_POST['logout'])) {
 
                 <!-- Q9 -->
                 <div id="about">
-
-                    <h4>Q. Are late fees or penalties applicable if I enrol late?</h4>
+                    <h4>Q. What should I do if I want to change my personal information (address, phone number, etc..)?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        Please refer to the Student Fees and Charges Guide in section 6.8, available at https://www.rmit.edu.vn/study-at-rmit/tuition-fees. You can find at the bottom of the webpage.
+                    You can talk with us in RMIT connect so we can help you change your profile information.
                     </p>
                 </div>
 
@@ -322,15 +313,33 @@ if (isset($_POST['logout'])) {
                 <!-- Q10 -->
                 <div id="about">
 
-                    <h4>Q. What happens if I do not enrol?</h4>
+                    <h4>Q. Can other students see my profile?</h4>
                     <br>
                     <h5>Answer:</h5>
                     <p>
-                        If you do not enrol by the published deadlines, you will not be able to add courses and will need to take Leave of Absence (LOA).
-                        In addition, if you are not enrolled or on a Leave of Absence by the Census Date (Friday of week 4) in any semester, your enrolment in your program may be cancelled.
+                    No, your profile is safe with us, unless your password is compromised then we can’t guarantee to protect your private information in such a case.
                     </p>
                 </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <!-- Q11 -->
+                <div id="about">
+
+                    <h4>Q. How can I protect my profile?</h4>
+                    <br>
+                    <h5>Answer:</h5>
+                    <p>
+                    You should only keep your password for yourself and yourself only. You are suggested to change your password every 3 months. We will send you emails to remind you when to change your password.
+                    </p>
+                </div>
+
+                <br>
             </div>
+
+
         </div>
     </body>
 
@@ -338,7 +347,7 @@ if (isset($_POST['logout'])) {
 
     <footer class="footer">
         <div>
-            <p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
+        <p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Ho Chi Minh City</p>
             <p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
         </div>
 
