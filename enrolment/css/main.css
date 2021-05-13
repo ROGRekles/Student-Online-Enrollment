@@ -262,7 +262,7 @@ h2{
         width: 60%;
         margin-top: 30px;
         margin-left: 250px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         text-align: center;
         border-collapse: collapse; 
     }
@@ -285,5 +285,7 @@ h2{
 .footer{
     margin-top: 10%;
     background-color: lightgray;
-    padding:2%;   
+    padding:3%;   
+    text-align: center;
+    
 }
