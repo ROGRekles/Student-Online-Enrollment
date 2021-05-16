@@ -168,7 +168,6 @@ if (isset($_POST['logout'])) {
 		<h3>Course history</h3>
 				<table class="history">
 					<thead>
-						<th>No.</th>
 						<th>Course code</th>
 						<th>Course title</th>
 						<th>Status</th>
@@ -176,22 +175,38 @@ if (isset($_POST['logout'])) {
 						<th>Year</th>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>COSC0001</td>
-							<td>Introduction to IT</td>
-							<td>In progress</td>
-							<td>Feb</td>
-							<td>2021</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>COSC0002</td>
-							<TD>Introduction to Programming</TD>
-							<td>In progress</td>
-							<td>Feb</td>
-							<td>2021</td>
-						</tr>
+				<?php
+					$sql = "SELECT * FROM enrolment WHERE student_id='$student_id' ";
+                $resultInner1 = mysqli_query($connectivity, $sql);
+
+                while ($row = $resultInner1->fetch_assoc()) :
+					$course1_id = $row['course_id'];
+					$enrolment_status = $row['enrolment_status'];
+				?>
+				
+				<?php 
+				$sql = "SELECT * FROM course WHERE course_id='$course1_id' ";
+				$resultInner2 = mysqli_query($connectivity, $sql);
+				while ($row = mysqli_fetch_assoc($resultInner2)) {
+					$course_title = $row['title'];
+					$rmit_course_id= $row['rmit_course_id'];
+                }
+				?>
+				<?php echo "<tr>"
+                    . "<td>" . $rmit_course_id
+					. "</td><td> " . $course_title
+					. "</td><td> " . $enrolment_status
+					. "</td><td> " ; ?>
+				<?php
+				$a=array("Feb"=>"a","Jun"=>"b","Nov"=>"c");
+				print_r(array_rand($a,1));
+				?>
+
+				<?php
+					echo "</td><td>2021</td> "
+                    . "</tr>"; ?>
+
+				<?php endwhile; ?>
 					</tbody>
 				</table>
 			</div>

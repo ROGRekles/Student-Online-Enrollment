@@ -1,11 +1,14 @@
 <?php
 	session_start();
 	require('connection_db.php');
-
 	$Account_C = $_POST['c_type'];
-	
 
-	if ($Account_C == 'student') {
+	if(count($_POST['t1_id']) != count(array_unique($_POST['t1_id'])))
+	{
+		$message = "You can only choose one semester per course";
+		echo "<script type='text/javascript'>alert('$message');window.location = 'home.php';</script>";
+	}
+	elseif ($Account_C == 'student') {
 		$ID=mysqli_real_escape_string($connectivity,$_POST['rmit_student_id']);
 		$Name=mysqli_real_escape_string($connectivity,$_POST['name']);
 		$Email=mysqli_real_escape_string($connectivity,$_POST['email']);
