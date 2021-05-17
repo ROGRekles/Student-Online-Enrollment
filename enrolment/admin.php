@@ -70,7 +70,9 @@ if (isset($_POST['logout'])) {
 
 		table {
 			border-collapse: collapse;
-			width: auto;
+			/* white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis; */
 		}
 
 		th {
@@ -83,14 +85,32 @@ if (isset($_POST['logout'])) {
 		td {
 			text-align: left;
 			padding: 8px;
+			text-overflow: ellipsis; 
+    		height: 20px;
 		}
 
 		tr:nth-child(even) {
 			background-color: #f2f2f2
 		}
 
+		.description{
+			overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+		}
+
+.description:hover{
+	overflow:visible;
+	border-bottom: 2px solid #009879;
+	display:table;
+	position:relative;
+	padding:0;
+}
+
 
 	</style>
+
 </head>
 
 <body>
@@ -199,7 +219,9 @@ if (isset($_POST['logout'])) {
 						<td><?= $row['rmit_course_id']; ?></td>
 						<td><?= $row['title']; ?></td>
 						<td><?= $row['max_capacity']; ?></td>
-						<td><?= $row['description']; ?></td>
+						<td class="description" > <?= $row['description']; ?>
+						
+						</td>
 						<td><?= $row['requirement']; ?></td>
 						<td><?= $row['unlocked_course']; ?></td>
 						<td><?= $row['lecturer']; ?></td>
@@ -223,7 +245,11 @@ if (isset($_POST['logout'])) {
 	</div>
 
 </body>
-
+<script>
+$('button').on('click', function() {
+  $('p').toggleClass('ellipses');
+});
+	</script>
 
 <!-- footer -->
 <footer class="footer">
