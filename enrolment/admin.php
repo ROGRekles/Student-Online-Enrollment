@@ -95,18 +95,25 @@ if (isset($_POST['logout'])) {
 
 		.description{
 			overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 200px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			max-width: 200px;
 		}
 
-.description:hover{
-	overflow:visible;
-	border-bottom: 2px solid #009879;
-	display:table;
-	position:relative;
-	padding:0;
-}
+		.description:hover{
+			overflow:visible;
+			position:relative;
+			margin:40px;
+			width: auto;
+			padding: 0;
+			height: 30px;
+			display:table;
+			border: none;
+			font-weight: 600;
+			font-size: large;
+			}
+
+
 
 
 	</style>
