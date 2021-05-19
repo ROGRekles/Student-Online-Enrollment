@@ -119,7 +119,7 @@ if (isset($_POST['logout'])) {
 		<!-- <h3>Personal Information</h3>
 		 -->
 			<div class="user-img">
-				<img src="../enrolment/image/user_img.png" alt="user_pic">
+				<img src="<?php echo $photo?>" alt="user_pic">
 			</div>
 
 
