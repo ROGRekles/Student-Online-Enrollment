@@ -19,7 +19,7 @@ CREATE TABLE `student` (
   `Gender` varchar(10) NOT NULL,
   `credit_point` varchar(10) NOT NULL,
   `gpa` varchar(10) NOT NULL,
-  `photo` varchar(100) NOT NULL,
+  `photo` longtext NOT NULL,
   `campus` varchar(100) NOT NULL,
   `major` varchar(50) NOT NULL DEFAULT 'Bsc. IT',
   PRIMARY KEY (`student_id`)

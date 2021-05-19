@@ -82,7 +82,7 @@
 		</style>
 
 		<b style="margin-left: 400px; font-size: 30px;">Student Registration Form</b> @admin
-		<form style="margin-left: 400px; width: 250px;" action="update_by_admin.php" method="POST">
+		<form style="margin-left: 400px; width: 250px;" action="update_by_admin.php" method="POST" enctype="multipart/form-data">
 			<input type="hidden" name="c_type" value="student"><br/>
 
 			Student ID<input required type="text" name="rmit_student_id" pattern="(s|S)[0-9]{7}" title="Must start with s/S and then 7 numbers" placeholder="Student ID"><br/>
@@ -101,6 +101,8 @@
 		</form>
 	<?php
 	}
+
+
 	elseif (isset($_GET['tu'])) {
 		?>
 		<style type="text/css">

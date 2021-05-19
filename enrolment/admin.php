@@ -112,7 +112,7 @@ if (isset($_POST['logout'])) {
 			font-weight: 600;
 			font-size: large;
 			}
-
+		
 
 
 
@@ -122,17 +122,20 @@ if (isset($_POST['logout'])) {
 
 <body>
 
-
-
 	<!-- student -->
 	<div style=" height: auto;">
 		<?php
 		$sql = "SELECT * FROM student";
 		$result = mysqli_query($connectivity, $sql);
+		
 
 		if (mysqli_num_rows($result) <= 0) {
 			echo "Student's data not found";
 		} else {
+			
+
+	
+
 		?>
 			<br>
 			<b style="font-size:25px; margin:20px;">Student</b>
@@ -170,11 +173,13 @@ if (isset($_POST['logout'])) {
 						<td><?= $row['Gender']; ?></td>
 						<td><?= $row['credit_point']; ?></td>
 						<td><?= $row['gpa']; ?></td>
+
 						<td>
 						
 						<img src="<?php echo $row['photo']?>" alt=" " width="80px">
 							
 						</td>
+
 						<td><?= $row['campus']; ?></td>
 						<td><?= $row['major']; ?></td>
 						<td><a href="update.php?s_id=<?= $row['student_id'] ?>">UPDATE</a></td>
