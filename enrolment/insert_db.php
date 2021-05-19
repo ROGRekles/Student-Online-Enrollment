@@ -114,10 +114,22 @@
 		$gender=$_POST['Gender'];
 		$creditpoint=$_POST['credit_point'];
 		$gpa=$_POST['gpa'];
-		$photo=$_POST['photo'];
+		// $photo=$_POST['photo'];
 		$campus=$_POST['campus'];
 		$major=$_POST['major'];
 		$student_id=$_POST['s_id'];
+
+		//Allowed file type
+		$allowed_extensions = array("jpg","jpeg","png","gif");
+		//extension file
+		$ext = substr($_FILES['photo']['name'], strrpos($_FILES['photo']['name'], '.') + 1);
+		if(in_array($ext, $allowed_extensions)){
+				
+			$photo = base64_encode(file_get_contents($_FILES['photo']['tmp_name']));
+
+			$photo=	'data:image/' . $ext . ';base64,' . $photo;
+			
+			}
 
 			$sql="UPDATE student SET rmit_student_id='$id',name='$name',email='$email',password='$password',date_of_birth='$dob',Gender='$gender',credit_point='$creditpoint',gpa='$gpa',photo='$photo',campus='$campus',major='$major' WHERE student_id=$student_id";
 				if(mysqli_query($connectivity,$sql)){
