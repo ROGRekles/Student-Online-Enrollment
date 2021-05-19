@@ -1,0 +1,292 @@
+/* basic setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: "Open Sans";
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    height: 35px;
+    margin: 20px 10px 10px 20px;
+}
+
+.header{
+    color:black;
+    width: 100%;
+    font-weight: 500;
+}
+
+.nagivate-bar{
+    top: 0;
+    margin-bottom: 5px;
+    z-index: 2;
+}
+
+
+
+.menu-bar ul{
+    display: inline-flex;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.menu-bar ul li{
+    list-style-type: none;
+    padding: 10px 30px 30px 30px ;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+  
+.menu-bar ul li a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;  
+}
+
+.menu-bar ul li a:hover {
+    color: gray;
+}
+
+
+.menu-bar ul li a:active {
+    color:crimson;
+    
+    border-left: 50%;
+    border-right: 50%;
+}
+
+hr{
+    display:flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-width: 1px;
+}
+
+/* body */
+h2{
+    padding:100px;
+}
+.container {
+    margin: auto;
+    width: 400px;
+    max-width: 90%;
+}
+
+.map_container{
+    background: white;
+    border-radius: 4px;
+    border: 0.5px black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.container form {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    margin-top: 30%;
+}
+
+.container form h3 {
+    text-align: center;
+    margin-bottom: 10%;
+    color: black;
+}
+
+.container form .form-control {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.container form .btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background:  rgb(250, 60, 60);
+    cursor: pointer;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.t1 {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+
+}
+
+.active-t1 th{
+    width: 140px;
+    height: 30px;
+    border-bottom: 2px solid #009879;
+    font-weight: 500;
+}
+
+.t1 tr td{
+    height:40px;
+}
+
+.t1 tr td:hover{
+    color:gray;
+    cursor:pointer;
+}
+
+
+
+.save-btn{
+    display : flex;
+    justify-content: right;
+    float: right;
+    transform: translateX(-50%);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: rgb(250, 60, 60);
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 30px;
+}
+
+
+
+/* profile */
+.user-img{
+    display: flex;
+    margin-left: 230px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+.user-info{
+    width: 50%;
+    margin-left: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.user-info table tr{
+    padding-bottom:40px;
+}
+
+.user-info table tr td{
+    height:30px;
+    border-bottom: 1px solid lightgrey;
+    padding-left: 10px;
+    width: 500px;
+    height: 30px;
+}
+
+.save-enrol-btn{
+    margin-left: 50%;
+    margin-top : 3%;
+    width: 100px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background: red;
+   cursor: pointer;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+.logout-btn{
+    margin: 10px;
+    font-size: small;
+    float: right;
+    border: none;
+    cursor: pointer;
+    color: black;
+    background-color:#F5F5F5;
+}
+
+.heading{
+    padding: 10px 10px 10px 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+}
+
+
+
+/* student history */
+    .user_infomation_text{
+        margin-left: 280px; 
+    }
+
+    .history_table h3{
+        margin-left: 280px; 
+        margin-top: 100px;
+    }
+
+    .history{
+        width: 60%;
+        margin-top: 30px;
+        margin-left: 250px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-collapse: collapse; 
+    }
+
+    .history th{
+        border-bottom:1px solid #009879;
+    }
+
+    .history td{
+        height: 30px;
+        padding: 10px;
+    }
+    .history  tbody tr:hover {
+        background: rgb(230, 253, 230);
+    }
+
+
+/* footer */
+
+.footer{
+    margin-top: 10%;
+    background-color: lightgray;
+    padding:3%;   
+    text-align: center;
+    
+}
