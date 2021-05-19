@@ -16,7 +16,7 @@
 			}
 		</style>
 		<b style="margin-left: 400px; font-size: 30px;">Student data update Form</b> @admin
-		<form style="margin-left: 400px; width: 250px;" action="insert_db.php" method="POST">
+		<form style="margin-left: 400px; width: 250px;" action="insert_db.php" method="POST" enctype="multipart/form-data">
 			<input type="hidden" name="s_id" value=<?=$student_id?>><br/>
 
 			Student ID:<input required type="text" name="rmit_student_id" pattern="(s|S)[0-9]{7}" title="Must start with s/S and then 7 numbers" value=<?=$row['rmit_student_id'];?>><br/>
