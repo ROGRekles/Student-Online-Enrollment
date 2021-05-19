@@ -170,7 +170,11 @@ if (isset($_POST['logout'])) {
 						<td><?= $row['Gender']; ?></td>
 						<td><?= $row['credit_point']; ?></td>
 						<td><?= $row['gpa']; ?></td>
-						<td><?= $row['photo']; ?></td>
+						<td>
+						
+						<img src="<?php echo $row['photo']?>" alt=" " width="80px">
+							
+						</td>
 						<td><?= $row['campus']; ?></td>
 						<td><?= $row['major']; ?></td>
 						<td><a href="update.php?s_id=<?= $row['student_id'] ?>">UPDATE</a></td>
