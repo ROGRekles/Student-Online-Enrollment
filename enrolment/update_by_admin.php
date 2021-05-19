@@ -52,11 +52,16 @@
 		$Sex=mysqli_real_escape_string($connectivity,$_POST['sex']);
 		$CreditPoint=mysqli_real_escape_string($connectivity,$_POST['credit_point']);
 		$GPA=mysqli_real_escape_string($connectivity,$_POST['gpa']);
-		$Photo=mysqli_real_escape_string($connectivity,$_POST['photo']);
+// 		$Photo=mysqli_real_escape_string($connectivity,$_POST['photo']);
 		$Campus=mysqli_real_escape_string($connectivity,$_POST['campus']);
 
 		$Major=mysqli_real_escape_string($connectivity,$_POST['major']);
-
+		
+		//Allowed file type
+		$allowed_extensions = array("jpg","jpeg","png","gif");
+		//extension img file
+		$ext = substr($_FILES['photo']['name'], strrpos($_FILES['photo']['name'], '.') + 1);
+		
 		$username= $_POST['email'];
 		$Pass=$_POST['password'];
 		$C_Pass=$_POST['confirm_password'];
@@ -75,17 +80,24 @@
 				header('Location:admin.php');
 			}
 			else{
-				$Database="INSERT INTO student(rmit_student_id,name,email,password,date_of_birth,Gender,credit_point,gpa,photo,campus,major)VALUES('$ID','$Name','$Email','$Pass','$Dob','$Sex','$CreditPoint','$GPA','$Photo','$Campus','$Major')";
+				if(in_array($ext, $allowed_extensions)){
+				//call file for insert img
+				$photo = base64_encode(file_get_contents($_FILES['photo']['tmp_name']));
+				
+				$photo=	'data:image/' . $ext . ';base64,' . $photo;
+				//insert database
+				$Database="INSERT INTO student(rmit_student_id,name,email,password,date_of_birth,Gender,credit_point,gpa,photo,campus,major)VALUES('$ID','$Name','$Email','$Pass','$Dob','$Sex','$CreditPoint','$GPA','$photo','$Campus','$Major')";
 			
 				if(mysqli_query($connectivity,$Database))
-				{
-					$_SESSION['message']=" Dear, admin the Name ". $Name." is registered.";
-					header("Location:admin.php");
-					exit();
-				}
+					{
+						$_SESSION['message']=" Dear, admin the Name ". $Name." is registered.";
+						header("Location:admin.php");
+						exit();
+					}
 				else
-				{
-					echo mysqli_error($connectivity);
+					{
+						echo mysqli_error($connectivity);
+					}
 				}
 			}
 	}
