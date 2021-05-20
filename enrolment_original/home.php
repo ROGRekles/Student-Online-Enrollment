@@ -15,197 +15,19 @@ if (isset($_POST['logout'])) {
 
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-<style>
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-            -webkit-animation-name: fadeIn;
-            /* Fade in the background */
-            -webkit-animation-duration: 0.4s;
-            animation-name: fadeIn;
-            animation-duration: 0.4s
-        }
 
-        /* Modal Content */
-        .modal-content {
-            position: fixed;
-            bottom: 0;
-            background-color: #fefefe;
-            width: 100%;
-            -webkit-animation-name: slideIn;
-            -webkit-animation-duration: 0.4s;
-            animation-name: slideIn;
-            animation-duration: 0.4s
-        }
-
-        /* The Close Button */
-        .close {
-            color: black;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-header {
-            padding: 2px 16px;
-
-            color: black;
-
-        }
-
-        .modal-body {
-            margin: auto;
-            width: 50%;
-            float: left;
-            padding: 2px 16px;
-        }
-
-        /* table */
-        .suggestion-path-table {
-            width: 50%;
-            height: 400px;
-            /* margin-left:500px; */
-            font-size: 24px;
-            border: 1px solid #000;
-            border-collapse: collapse;
-        }
-
-        .course-table {
-            height: 400px;
-            padding: 0px;
-
-        }
-
-        .course-table td {
-            width: 600px;
-            padding: 10px;
-            margin: 20px;
-            border: solid;
-            border-width: 1.5px;
-            border-color: black;
-        }
-
-        .course-table tr {
-            height: 50px;
-        }
-
-        .course-table tr .course-name {
-            height: auto;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .course-table tr .pre-requisites {
-            height: auto;
-            text-align: center;
-        }
-
-        .course-table tr .credit-point {
-            height: auto;
-            text-align: center;
-        }
-
-        .course-table tr .course-description {
-            height: auto;
-        }
-
-
-        .suggestion-path {
-            height: auto;
-
-        }
-
-        .suggestion-path-table {
-            width: 100%;
-            float: left;
-            height: 400px;
-            padding: 0px;
-            border: solid 1px;
-        }
-
-        .suggestion-path-table .td {
-            width: 600px;
-            padding: 10px;
-            margin: 20px;
-            border: solid;
-            border-width: 1.5px;
-            border-color: black;
-        }
-
-
-        /* Add Animation */
-        @-webkit-keyframes slideIn {
-            from {
-                bottom: -300px;
-                opacity: 0
-            }
-
-            to {
-                bottom: 0;
-                opacity: 1
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                bottom: -300px;
-                opacity: 0
-            }
-
-            to {
-                bottom: 0;
-                opacity: 1
-            }
-        }
-
-        @-webkit-keyframes fadeIn {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-    </style>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link href="../enrolment/css/main.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="../enrolment/css/btn.css">
+    
+    <!-- source code for course detail button -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
     <title>OES Home</title>
 
     <div>
@@ -294,7 +116,7 @@ if (isset($_POST['logout'])) {
                     . $row["course_id"]
                     . "</td><td> " . $row["rmit_course_id"]
                     . "</td><td> " . $row["title"]
-                    . "</td><td><button type='button' id='myBtn'>Detail</button></td><td>"; ?>
+                    . "</td><td> <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'></button> </td><td>"; ?>
                 <?php
                 $sql = "SELECT * FROM enrolment WHERE student_id='$student_id' AND course_id='$course1_id' ";
                 $resultInner1 = mysqli_query($connectivity, $sql);
@@ -339,16 +161,63 @@ if (isset($_POST['logout'])) {
                 <?php $enrolment_status = '' ?>
 
             <?php endwhile; ?>
-            
-
-
-
 
         </table>
         <input type="hidden" name="s_id" value=<?= $student_id ?>>
         <input type="hidden" name="enrolment_status" value="In Progress">
         <a href="insert_db.php"><input class="save-btn" type="submit" value="Save"></a>
     </form>
+
+    <!-- new -->
+
+    <div class="container">
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Detail</button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="font-weight: 700;">Introduction to Information & Technology</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Course Information</h4>
+                        <table style="margin:25px;">
+                            <tr>
+                                <th> Lecturer : </th>
+                                <td>Minh</td>
+                            </tr>
+                            <tr>
+                                <th> Pre - requisites : </th>
+                                <td> None </td>
+                            </tr>
+                            <tr>
+                                <th> Credit : </th>
+                                <td> 12 </td>
+                            </tr>
+                            <tr>
+                                <th> Description : </th>
+                                <td>This course will be learning about basic for student to learn various thing about IT.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h4>Suggested Path</h4>
+                        <img src="../enrolment/image/Introduction to information technology.png" alt="" style="width: 80%;height:80%;margin-left:25px;">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 
@@ -358,93 +227,20 @@ if (isset($_POST['logout'])) {
     <div>
         <p>Address: 702 Nguyen Van Linh, Tan Hung, Quan 7, Thanh pho Ho Chi Minh 700000</p>
         <p>Hotline: +84) 1123 4435. All RIGHTS RESERVED.</p>
-       &copy;
+        &copy;
         <script>
             document.write(new Date().getFullYear());
         </script>
 
         <p>Disclaimer: This website is not a real website</p>
-      
+
     </div>
 
 
     <div>
 
     </div>
-    <div id="myModal" class="modal">
 
-<!-- Modal content -->
-<div class="modal-content">
-    <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Course Detail</h2>
-    </div>
-
-    <div class="modal-body">
-
-        <!-- course detail table -->
-
-        <table class="course-table">
-            <tr>
-                <td class="course-name"> Course name : Introduction to Java</td>
-            </tr>
-            <tr>
-                <td class="pre-requisites">Pre-requisties : None</td>
-            </tr>
-            <tr>
-                <td class="credit-point">Credit-point : 12</td>
-            </tr>
-            <tr>
-                <td class="course-description">
-                    Course description:
-                    <li>This course will be learning about basic knowledge about IT</li>
-                
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- suggested path diagram -->
-    <div class="modal-body">
-        <table class="suggestion-path-table">
-            <tr>
-                <td class="" style="padding: 10px;">Suggestion-path <img src="../enrolment/image/Introductionn to IT_sg.png" alt="sg" style="width: 500px;"></td>
-            </tr>
-        </table>
-
-    </div>
-
-</div>
-
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
 </footer>
 
 
