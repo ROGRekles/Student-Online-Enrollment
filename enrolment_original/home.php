@@ -182,31 +182,40 @@ if (isset($_POST['logout'])) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title" style="font-weight: 700;">Introduction to Information & Technology</h4>
+                        <h4 class="modal-title" style="font-weight: 700;">Programing Project 1</h4>
                     </div>
                     <div class="modal-body">
                         <h4>Course Information</h4>
                         <table style="margin:25px;">
                             <tr>
-                                <th> Lecturer : </th>
-                                <td>Minh</td>
+                                <th style="width:40px;">Lecturer</th>
                             </tr>
                             <tr>
-                                <th> Pre - requisites : </th>
-                                <td> None </td>
+                                <td style="width: 200px;padding: 10px;">Minh Thanh Vu</td>
                             </tr>
                             <tr>
-                                <th> Credit : </th>
-                                <td> 12 </td>
+                                <th style="width:40px;">Pre-requisites</th>
                             </tr>
                             <tr>
-                                <th> Description : </th>
-                                <td>This course will be learning about basic for student to learn various thing about IT.</td>
+                                <td style="width: 400px; padding: 10px; ">Software Engineering Project Management </td>
+                            </tr>
+                            <tr>
+                                <th style="width:40px;">Credit</th>
+                            </tr>
+                            <tr>
+                                <td style="width: 400px; padding: 10px; ">12</td>
+                            </tr>
+                            <tr>
+                                <th style="width:40px;">Description</th>
+                            </tr>
+                            <tr>
+                              <td style="width: 400px; padding: 10px; ">This course will outline 2 development projects to help student build and add to your portfolio as a junior developer.
+                                     Student may also will learn on How to Move From Junior to Senior Web Developer.</td>
                             </tr>
                             </tbody>
                         </table>
                         <h4>Suggested Path</h4>
-                        <img src="../enrolment/image/Introduction to information technology.png" alt="" style="width: 80%;height:80%;margin-left:25px;">
+                        <img src="../enrolment/image/programming1.png" alt="" style="width: 80%;height:80%;margin-left:25px;">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
